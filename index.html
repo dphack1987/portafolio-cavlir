@@ -54,9 +54,10 @@
             font-weight: 700; /* Más audaz por defecto */
         }
 
-        h1 { font-size: 4.2em; color: var(--color-primary-green); font-weight: 900; letter-spacing: -1px; } /* Más grande y audaz */
-        h2 { font-size: 3.2em; font-weight: 800; } /* Más grande */
-        h3 { font-size: 2.4em; font-weight: 700; } /* Más grande */
+        /* Ajustes de tipografía para títulos */
+        h1 { font-size: 3.8em; color: var(--color-primary-green); font-weight: 800; letter-spacing: -1px; }
+        h2 { font-size: 2.8em; font-weight: 700; }
+        h3 { font-size: 2.4em; font-weight: 700; }
         h4 { font-size: 1.8em; font-weight: 600; }
 
         p {
@@ -103,7 +104,7 @@
             text-align: center;
             max-width: 900px;
             margin: 0 auto 80px auto; /* Más espacio */
-            font-size: 1.3em; /* Más grande */
+            font-size: 1.2em; /* Ajustado para mejor legibilidad */
             color: var(--color-text-medium); /* Gris más suave */
             line-height: 1.8;
         }
@@ -382,17 +383,30 @@
             overflow: hidden;
         }
 
-        /* Hero Section - Cavlir Logo */
-        .hero-cavlir-logo {
-            text-align: center; /* Centra la imagen dentro del div */
-            margin-bottom: 40px; /* Espacio debajo del logo */
+        /* Hero Section - Logos Container */
+        .hero-logos-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px; /* Espacio entre los logos */
+            margin-bottom: 40px; /* Espacio debajo de los logos */
+            flex-wrap: wrap; /* Permite que los logos se envuelvan en pantallas pequeñas */
         }
 
-        .hero-cavlir-logo img {
-            max-width: 250px; /* Tamaño máximo para el logo */
+        .hero-logos-container img {
             height: auto;
             border-radius: 15px; /* Bordes redondeados */
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* Sombra para destacarlo */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Sombra sutil directamente en la imagen */
+        }
+
+        .hero-logos-container .logo-cavlir {
+            max-width: 350px; /* Tamaño más grande para el logo de Cavlir */
+            width: 100%; /* Asegura que se escale en pantallas pequeñas */
+        }
+
+        .hero-logos-container .logo-informativo {
+            max-width: 250px; /* Tamaño para el logo del informativo, más pequeño que Cavlir pero visible */
+            width: 100%; /* Asegura que se escale en pantallas pequeñas */
         }
 
         .hero h1 {
@@ -1096,6 +1110,10 @@
             color: var(--color-text-light);
         }
 
+        .footer-social {
+            margin-top: 20px;
+        }
+
         .footer-social a {
             color: var(--color-text-light);
             font-size: 2em; /* Iconos más grandes */
@@ -1169,12 +1187,17 @@
             .hero p { font-size: 1.2em; }
             .hero .btn { font-size: 1.1em; padding: 15px 35px; }
 
-            /* Adjustments for smaller screens for the hero logo */
-            .hero-cavlir-logo {
+            /* Adjustments for smaller screens for the hero logos */
+            .hero-logos-container {
+                flex-direction: column; /* Stack logos vertically on small screens */
+                gap: 20px; /* Adjust gap for stacked logos */
                 margin-bottom: 30px;
             }
-            .hero-cavlir-logo img {
-                max-width: 180px;
+            .hero-logos-container .logo-cavlir {
+                max-width: 250px; /* Adjust max-width for smaller screens */
+            }
+            .hero-logos-container .logo-informativo {
+                max-width: 180px; /* Adjust max-width for smaller screens */
             }
 
             .floating-button {
@@ -1252,12 +1275,15 @@
         }
 
         @media (max-width: 480px) {
-            /* Further adjustments for the hero logo on very small screens */
-            .hero-cavlir-logo {
-                margin-bottom: 20px;
+            /* Further adjustments for the hero logos on very small screens */
+            .hero-logos-container {
+                gap: 15px;
             }
-            .hero-cavlir-logo img {
-                max-width: 150px;
+            .hero-logos-container .logo-cavlir {
+                max-width: 180px;
+            }
+            .hero-logos-container .logo-informativo {
+                max-width: 120px;
             }
         }
     </style>
@@ -1321,9 +1347,10 @@
     <!-- Sección de Héroe / Bienvenida -->
     <section id="inicio" class="hero">
         <div class="container">
-            <!-- Nuevo logo de Cavlir centrado en la sección Hero -->
-            <div class="hero-cavlir-logo">
-                <img src="images/logo-cavlir.png" alt="Logo de Cambiando Vidas LR S.A.S.">
+            <!-- Contenedor para los logos de Cavlir y El Informativo -->
+            <div class="hero-logos-container">
+                <img src="images/logo-cavlir.png" alt="Logo de Cambiando Vidas LR S.A.S." class="logo-cavlir">
+                <img src="images/informativo.jpg" alt="Logo de El Informativo LA REGIÓN" class="logo-informativo">
             </div>
             <h1>Cambiando Vidas LR S.A.S.: Potenciando Tu Comunicación Estratégica</h1>
             <h2>Tu Mensaje, Nuestro Alcance. Alianza Estratégica con El Informativo LA REGIÓN.</h2>
@@ -1338,7 +1365,7 @@
             <h2 class="section-title">Nuestra Alianza Estratégica</h2>
             <div class="alliance-content">
                 <div class="alliance-text">
-                    <p>En **Cambiando Vidas LR S.A.S.** (NIT. 901777314-0, Representante legal: Martha Liliana Rodríguez Romo), hemos forjado una alianza estratégica con El Informativo LA REGIÓN para ofrecerte una experiencia y cobertura mediática sin precedentes en Colombia. Esta unión combina nuestra visión innovadora en gestión de comunicación con la trayectoria consolidada de El Informativo LA REGIÓN, permitiéndonos llevar tu mensaje mucho más allá y asegurar su impacto.</p>
+                    <p>En **Cambiando Vidas LR S.A.S.**, bajo el liderazgo de su representante legal Martha Liliana Rodríguez Romo, hemos forjado una alianza estratégica con El Informativo LA REGIÓN para ofrecerte una experiencia y cobertura mediática sin precedentes en Colombia. Esta unión combina nuestra visión innovadora en gestión de comunicación con la trayectoria consolidada de El Informativo LA REGIÓN, permitiéndonos llevar tu mensaje mucho más allá y asegurar su impacto.</p>
                     <p><strong>El Informativo LA REGIÓN</strong>, con 15 años de experiencia, inició con un periódico impreso a color en el municipio de Yarumal, Antioquia (ISNN 2248-8979). Su evolución ha sido constante, expandiendo su alcance a plataformas digitales robustas como YouTube, Blogger, Facebook, Instagram, Twitter, LinkedIn, Spotify y Rumble, consolidándose como un referente informativo.</p>
                     <p>Entre sus primeros clientes destacados se encuentran la Asamblea Departamental de Antioquia, Gobernación de Antioquia, Alcaldía de Yarumal, Concejo de Medellín y el Hospital San Juan de Dios de Yarumal, lo que demuestra su sólida trayectoria y confianza en el sector público y privado.</p>
                     <p>La expansión de El Informativo LA REGIÓN incluye la creación de su emisora Online, el portal de noticias <a href="http://www.prensalaregion.com" target="_blank">www.prensalaregion.com</a>, el Magazín La Región en Facebook, el Noticiero Estelar internacional La Región, y el canal digital de Televisión <a href="http://www.laregiontv.com" target="_blank">www.laregiontv.com</a>, todos debidamente registrados en Cámara de Comercio.</p>
@@ -2077,7 +2104,7 @@
                     <ul class="package-features">
                         <li><i class="fas fa-check-circle"></i> Espacios en TV digital</li>
                         <li><i class="fas fa-check-circle"></i> Publicaciones en nuestras 3 páginas web</li>
-                        <li><i class="fas fa-check-circle"></i> Publicaciones Diarias en Redes Sociales</li>
+                        <li><i class="fas class="fa-check-circle"></i> Publicaciones Diarias en Redes Sociales</li>
                         <li><i class="fas fa-check-circle"></i> Anuncio de video Publicitario semanal</li>
                         <li><i class="fas fa-check-circle"></i> Anuncio para radio publicitario semanal</li>
                         <!-- Este paquete no incluye menciones de radios aliadas -->
@@ -2118,7 +2145,6 @@
                     <p>Una excelente alternativa para una campaña extendida con un enfoque digital y audiovisual, sin las menciones en radios aliadas. Este paquete incluye TV digital, publicaciones web, gestión de redes sociales, y anuncios de video y radio, ofreciendo un gran valor con un descuento del 50% por seis meses con pago anticipado.</p>
                     <ul class="package-features">
                         <li><i class="fas fa-check-circle"></i> Espacios en TV digital</li>
-                        <li><i class="fas fa-check-circle"></i> Publicaciones en nuestras 3 páginas web</li>
                         <li><i class="fas class="fa-check-circle"></i> Publicaciones Diarias en Redes Sociales</li>
                         <li><i class="fas fa-check-circle"></i> Anuncio de video Publicitario semanal</li>
                         <li><i class="fas fa-check-circle"></i> Anuncio para radio publicitario semanal</li>
