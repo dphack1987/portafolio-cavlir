@@ -511,6 +511,18 @@
             line-height: 1.7;
         }
 
+        /* Styling for prices in Service Items */
+        .services-overview .service-item .service-price {
+            font-weight: 700;
+            color: white; /* Color blanco */
+            font-size: 1.2em; /* Tamaño de fuente para el precio */
+            margin-top: 15px; /* Espacio superior para el precio */
+            background-color: var(--color-primary-green); /* Fondo para el precio */
+            padding: 8px 15px;
+            border-radius: 8px;
+            display: inline-block; /* Para que el padding y background funcionen */
+        }
+
 
         /* Coverage Section (Cobertura y Medios Aliados) */
         .coverage-grid {
@@ -616,6 +628,9 @@
             white-space: nowrap; /* Keep price on one line */
             font-size: 1.1em; /* Slightly larger price */
             flex-shrink: 0; /* Prevent price from shrinking */
+            background-color: var(--color-primary-green); /* Fondo para el precio */
+            padding: 5px 10px;
+            border-radius: 5px;
         }
 
         /* Rates Section (Tarifas Detalladas por Medio) */
@@ -741,6 +756,9 @@
             white-space: nowrap;
             font-size: 1.15em; /* Slightly larger price */
             flex-shrink: 0;
+            background-color: var(--color-primary-green); /* Fondo para el precio */
+            padding: 5px 10px;
+            border-radius: 5px;
         }
 
         .rate-category p {
@@ -786,6 +804,10 @@
         .rate-category table td span {
             font-weight: 700;
             color: white; /* Color blanco */
+            background-color: var(--color-primary-green); /* Fondo para el precio */
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
         }
         .rate-category table tr:nth-child(even) {
             background-color: #f8f9fa; /* Rayas para legibilidad */
@@ -1287,41 +1309,49 @@
                     <i class="fas fa-tv"></i>
                     <h3>Espacios en TV Digital</h3>
                     <p>Anuncios y programas estratégicos en nuestro canal digital de televisión, para una audiencia global.</p>
+                    <span class="service-price">$1.300.000</span>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-globe"></i>
                     <h3>Publicaciones Web</h3>
                     <p>Máxima visibilidad en nuestras 3 páginas web y portales de noticias aliados, con alto tráfico y alcance garantizado.</p>
+                    <span class="service-price">$1.040.000</span>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-share-alt"></i>
                     <h3>Gestión de Redes Sociales</h3>
                     <p>Publicaciones diarias y estratégicas en las principales plataformas para mantener su marca activa, relevante y en constante interacción.</p>
+                    <span class="service-price">$910.000</span>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-video"></i>
                     <h3>Anuncios de Video Publicitarios</h3>
                     <p>Producción y difusión semanal de videos impactantes y profesionales diseñados para captar la atención de su público objetivo.</p>
+                    <span class="service-price">$1.560.000</span>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-microphone-alt"></i>
                     <h3>Anuncios de Radio Publicitarios</h3>
                     <p>Cuñas radiales semanales de alta calidad en nuestra extensa red de emisoras FM y online, asegurando un alcance masivo.</p>
+                    <span class="service-price">$1.170.000</span>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-bullhorn"></i>
                     <h3>Menciones y Presencia de Marca</h3>
                     <p>Fortalecimiento continuo de su marca a través de menciones estratégicas y destacadas en todas nuestras radios aliadas.</p>
+                    <span class="service-price">$780.000</span>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-newspaper"></i>
                     <h3>Prensa Escrita y Digital</h3>
                     <p>Difusión efectiva de su información en periódicos impresos y digitales, así como en revistas especializadas de amplio reconocimiento.</p>
+                    <span class="service-price">$1.430.000</span>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-podcast"></i>
                     <h3>Magazines Radiales</h3>
                     <p>Participación destacada en "Hablemos claro" (más de 400.000 oyentes) y "Hablemos en serio con Fredy Gómez" (más de 200.000 oyentes), para un impacto directo.</p>
+                    <span class="service-price">$1.950.000</span>
                 </div>
             </div>
         </div>
@@ -1340,11 +1370,11 @@
                     <h4>Emisoras Comunitarias en FM:</h4>
                     <ul>
                         <li>
-                            <span class="item-name">Nordeste Stereo, Remedios: Cuña 20 seg.</span>
+                            <span class="item-name">Nordeste Stereo, Remedios de Antioquia: Cuña 20 seg.</span>
                             <span class="item-price">$23.400</span>
                         </li>
                         <li>
-                            <span class="item-name">Buritica Stereo, Buriticá: Cuña 20 seg.</span>
+                            <span class="item-name">Buritica Stereo, Buriticá Occidente de Antioquia: Cuña 20 seg.</span>
                             <span class="item-price">$23.400</span>
                         </li>
                         <li>
@@ -1383,7 +1413,7 @@
                     <h4>Plataforma Digital:</h4>
                     <ul>
                         <li>
-                            <span class="item-name">FACETA 5 (Barbosa): 26.000 seguidores. Publicidad</span>
+                            <span class="item-name">FACETA 5 (Barbosa): 26.000 seguidores. Publicidad mensual</span>
                             <span class="item-price">$260.000</span>
                         </li>
                     </ul>
@@ -1715,23 +1745,23 @@
                     <ul>
                         <li>
                             <span class="item-name">Banner Superior (1380 x 250 PX, 15 seg.): mensuales</span>
-                            <span class="item-price">$1.040.000</span>
+                            <span class="item-price">$1.170.000</span>
                         </li>
                         <li>
                             <span class="item-name">Banner Superior (1024 x 100 PX, 10 seg.): mensuales</span>
-                            <span class="item-price">$520.000</span>
+                            <span class="item-price">$585.000</span>
                         </li>
                         <li>
                             <span class="item-name">Banner Central (500 x 250 PX, 10 seg.): mensuales</span>
-                            <span class="item-price">$455.000</span>
+                            <span class="item-price">$390.000</span>
                         </li>
                         <li>
                             <span class="item-name">Banner Central (800 x 250 PX, 10 seg.): mensuales</span>
-                            <span class="item-price">$520.000</span>
+                            <span class="item-price">$455.000</span>
                         </li>
                         <li>
                             <span class="item-name">Banner Inferior (250 x 250 PX, 10 seg.): mensuales</span>
-                            <span class="item-price">$390.000</span>
+                            <span class="item-price">$325.000</span>
                         </li>
                     </ul>
                 </div>
