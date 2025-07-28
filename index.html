@@ -1,0 +1,2061 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiando Vidas LR S.A.S. | Portafolio de Servicios de Comunicación</title>
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Fuentes de Google Fonts: Montserrat para títulos, Open Sans para texto general -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Variables de Colores (Tonos Verdes Modernos y Paleta Extendida) */
+        :root {
+            --color-primary-green: #28a745; /* Un verde vibrante y profesional */
+            --color-dark-green: #1e7e34;    /* Un verde más oscuro para acentos y hover */
+            --color-light-green: #e2f0e7;   /* Un verde muy claro para fondos suaves */
+            --color-accent-green: #17a2b8;  /* Un verde azulado para un toque de frescura */
+            --color-text-dark: #212529;     /* Texto oscuro para alta legibilidad */
+            --color-text-medium: #495057;   /* Gris medio para descripciones */
+            --color-text-light: #f8f9fa;    /* Texto claro en fondos oscuros */
+            --color-background-light: #ffffff; /* Fondo claro general */
+            --color-background-dark: #263238; /* Fondo oscuro para header y footer (gris oscuro casi negro) */
+            --color-gray-border: #dee2e6;   /* Borde gris suave y moderno */
+            --color-shadow-light: rgba(0,0,0,0.08); /* Sombra ligera */
+            --color-shadow-medium: rgba(0,0,0,0.15); /* Sombra media */
+            --color-shadow-strong: rgba(0,0,0,0.25); /* Sombra fuerte para elementos destacados */
+        }
+
+        /* Base Global */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7; /* Mayor interlineado para mejor lectura */
+            color: var(--color-text-dark);
+            background-color: var(--color-background-light);
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased; /* Suavizado de fuentes */
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px; /* Más padding lateral para un look más abierto */
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--color-dark-green);
+            margin-bottom: 25px; /* Más espacio */
+            line-height: 1.25;
+            font-weight: 700; /* Más audaz por defecto */
+        }
+
+        h1 { font-size: 4.2em; color: var(--color-primary-green); font-weight: 900; letter-spacing: -1px; } /* Más grande y audaz */
+        h2 { font-size: 3.2em; font-weight: 800; } /* Más grande */
+        h3 { font-size: 2.4em; font-weight: 700; } /* Más grande */
+        h4 { font-size: 1.8em; font-weight: 600; }
+
+        p {
+            margin-bottom: 20px; /* Más espacio */
+            font-size: 1.1em; /* Ligeramente más grande */
+            line-height: 1.7;
+            color: var(--color-text-medium);
+        }
+
+        a {
+            color: var(--color-primary-green);
+            text-decoration: none;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--color-dark-green);
+            text-decoration: underline;
+        }
+
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px; /* Más espacio */
+            position: relative;
+            padding-bottom: 25px; /* Más espacio para la línea */
+            font-size: 3.2em; /* Asegurar tamaño consistente */
+            color: var(--color-text-dark); /* Título de sección más oscuro */
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 120px; /* Línea más ancha */
+            height: 6px; /* Línea más gruesa */
+            background-color: var(--color-primary-green);
+            border-radius: 3px;
+        }
+
+        .section-description {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 80px auto; /* Más espacio */
+            font-size: 1.3em; /* Más grande */
+            color: var(--color-text-medium); /* Gris más suave */
+            line-height: 1.8;
+        }
+
+        /* Botones */
+        .btn {
+            display: inline-block;
+            padding: 16px 40px; /* Más padding */
+            border-radius: 50px;
+            font-weight: 700; /* Más audaz */
+            text-align: center;
+            transition: all 0.3s ease; /* Transición para todo */
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 1.05em; /* Ligeramente más grande */
+            letter-spacing: 1px; /* Más espacio entre letras */
+            box-shadow: 0 6px 18px var(--color-shadow-light); /* Sombra más pronunciada */
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::before { /* Efecto hover de fondo */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            left: 0;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary-green);
+            color: var(--color-text-light);
+            border: 2px solid var(--color-primary-green);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-dark-green);
+            border-color: var(--color-dark-green);
+            transform: translateY(-6px); /* Efecto de elevación más pronunciado */
+            box-shadow: 0 10px 25px var(--color-shadow-medium);
+        }
+
+        .btn-secondary {
+            background-color: var(--color-background-light);
+            color: var(--color-primary-green);
+            border: 2px solid var(--color-primary-green);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--color-primary-green);
+            color: var(--color-text-light);
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px var(--color-shadow-medium);
+        }
+
+
+        /* Header */
+        .main-header {
+            background-color: var(--color-background-dark);
+            color: white; /* Texto blanco para contraste */
+            padding: 22px 0; /* Más padding */
+            box-shadow: 0 5px 20px var(--color-shadow-strong); /* Sombra más fuerte */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .main-header .logo img {
+            height: 65px; /* Ajusta según el tamaño de tu logo */
+            vertical-align: middle;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .main-nav ul li {
+            margin-left: 45px; /* Más espacio entre ítems */
+        }
+
+        .main-nav ul li a {
+            color: white; /* Texto blanco para contraste */
+            font-weight: 600;
+            padding: 10px 0; /* Más padding */
+            position: relative;
+            transition: color 0.3s ease;
+            font-size: 1.1em; /* Ligeramente más grande */
+        }
+
+        .main-nav ul li a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px; /* Más abajo */
+            width: 0;
+            height: 4px; /* Línea más gruesa */
+            background-color: var(--color-primary-green);
+            transition: width 0.3s ease;
+        }
+
+        .main-nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            background: none;
+            border: none;
+            color: white; /* Texto blanco para contraste */
+            font-size: 2.5em; /* Más grande */
+            cursor: pointer;
+            display: none; /* Oculto por defecto en desktop */
+            transition: transform 0.3s ease;
+        }
+        .mobile-menu-toggle:hover {
+            transform: scale(1.15);
+        }
+
+        /* Mobile Navigation Overlay */
+        .mobile-nav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.98); /* Más opaco */
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .mobile-nav-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-nav-content {
+            background-color: var(--color-background-dark);
+            padding: 60px; /* Más padding */
+            border-radius: 15px; /* Más redondeado */
+            text-align: center;
+            position: relative;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 15px 40px var(--color-shadow-strong);
+        }
+
+        .mobile-nav-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 50px 0; /* Más espacio */
+        }
+
+        .mobile-nav-content ul li {
+            margin-bottom: 30px; /* Más espacio */
+        }
+
+        .mobile-nav-content ul li a {
+            color: white; /* Texto blanco para contraste */
+            font-size: 2em; /* Más grande */
+            font-weight: 700;
+            display: block;
+            padding: 15px 0;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .mobile-nav-content ul li a:hover {
+            color: var(--color-primary-green);
+            background-color: rgba(255,255,255,0.08); /* Fondo sutil al pasar el ratón */
+        }
+
+        .close-mobile-menu {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            background: none;
+            border: none;
+            color: white; /* Texto blanco para contraste */
+            font-size: 2.5em;
+            cursor: pointer;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        .close-mobile-menu:hover {
+            transform: rotate(90deg) scale(1.1);
+            color: var(--color-primary-green);
+        }
+
+        .whatsapp-mobile-button {
+            background-color: #25d366;
+            color: white;
+            border: none;
+            padding: 18px 35px;
+            font-size: 1.3em;
+            display: inline-flex;
+            align-items: center;
+            margin-top: 40px;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        }
+        .whatsapp-mobile-button i {
+            margin-right: 15px;
+            font-size: 1.4em;
+        }
+
+
+        /* Floating WhatsApp Button */
+        .floating-whatsapp-button {
+            position: fixed;
+            bottom: 35px; /* Más margen */
+            right: 35px; /* Más margen */
+            background-color: #25d366; /* WhatsApp Green */
+            color: white;
+            width: 70px; /* Más grande */
+            height: 70px; /* Más grande */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5em; /* Icono más grande */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.45); /* Sombra más pronunciada */
+            z-index: 999;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .floating-whatsapp-button:hover {
+            transform: scale(1.2) translateY(-7px); /* Efecto de elevación y escala */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+        }
+
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(40, 167, 69, 0.92), rgba(33, 136, 56, 0.92)), url('images/hero-background.jpg') no-repeat center center/cover; /* Fondo más oscuro y con más opacidad */
+            background-attachment: fixed; /* Efecto parallax */
+            color: white; /* Texto blanco para contraste */
+            text-align: center;
+            padding: 180px 30px; /* Más padding */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh; /* Altura mínima para que se vea bien */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            font-size: 5em; /* Más grande */
+            margin-bottom: 25px;
+            color: white;
+            text-shadow: 4px 4px 8px rgba(0,0,0,0.5); /* Sombra de texto más fuerte */
+            line-height: 1.1;
+        }
+
+        .hero h2 {
+            font-size: 2.8em; /* Más grande */
+            margin-bottom: 50px;
+            color: white; /* Texto blanco para contraste */
+            font-weight: 600;
+            border-bottom: none;
+            padding-bottom: 0;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.5em; /* Más grande */
+            max-width: 1000px;
+            margin: 0 auto 70px auto;
+            opacity: 0.98;
+            line-height: 1.7;
+            color: white; /* Texto blanco para contraste */
+        }
+
+        .hero .btn {
+            font-size: 1.4em; /* Botón más grande */
+            padding: 22px 50px;
+            border-radius: 60px; /* Más redondeado */
+        }
+
+        /* Secciones Generales */
+        section {
+            padding: 120px 0; /* Más padding vertical */
+            position: relative;
+        }
+
+        section:nth-of-type(even) { /* Fondo alternado para legibilidad */
+            background-color: var(--color-light-green);
+        }
+
+
+        /* About Us / Nuestra Alianza */
+        .about-us .alliance-content {
+            display: flex;
+            gap: 70px; /* Más espacio */
+            align-items: center; /* Centrar verticalmente */
+            flex-wrap: wrap;
+        }
+
+        .about-us .alliance-text {
+            flex: 2;
+            min-width: 350px;
+            line-height: 1.8;
+            font-size: 1.15em;
+        }
+
+        .about-us .alliance-text p {
+            margin-bottom: 25px;
+            color: var(--color-text-dark);
+        }
+
+        .about-us .alliance-logos-display {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+            background-color: var(--color-background-light);
+            padding: 40px; /* Más padding */
+            border-radius: 20px; /* Más redondeado */
+            box-shadow: 0 10px 30px var(--color-shadow-medium);
+        }
+
+        .about-us .alliance-logo-large {
+            max-width: 95%; /* Ajuste para que no sea demasiado grande */
+            height: auto;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px var(--color-shadow-light);
+        }
+
+        .about-us .alliance-tagline {
+            font-style: italic;
+            color: var(--color-text-medium);
+            font-size: 1.3em; /* Más grande */
+            line-height: 1.6;
+            font-weight: 600;
+        }
+
+
+        /* Services Overview */
+        .services-overview .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Min ancho de 320px */
+            gap: 45px; /* Más espacio */
+            margin-top: 60px;
+        }
+
+        .services-overview .service-item {
+            background-color: var(--color-background-light);
+            border: 1px solid var(--color-gray-border);
+            border-radius: 20px; /* Más redondeado */
+            padding: 40px; /* Más padding */
+            text-align: center;
+            box-shadow: 0 10px 30px var(--color-shadow-light); /* Sombra más pronunciada */
+            transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .services-overview .service-item:hover {
+            transform: translateY(-15px); /* Efecto de elevación más pronunciado */
+            box-shadow: 0 15px 40px var(--color-shadow-medium);
+            border-color: var(--color-primary-green); /* Borde verde al pasar el ratón */
+        }
+
+        .services-overview .service-item i {
+            font-size: 4.5em; /* Icono más grande */
+            color: var(--color-primary-green);
+            margin-bottom: 25px;
+        }
+
+        .services-overview .service-item h3 {
+            color: var(--color-dark-green);
+            margin-top: 0;
+            margin-bottom: 18px;
+            font-size: 2.1em; /* Título más grande */
+            line-height: 1.3;
+        }
+
+        .services-overview .service-item p {
+            font-size: 1.05em;
+            color: var(--color-text-medium);
+            line-height: 1.7;
+        }
+
+
+        /* Coverage Section (Cobertura y Medios Aliados) */
+        .coverage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Min ancho de 350px */
+            gap: 45px; /* Más espacio */
+            margin-top: 60px;
+        }
+
+        .coverage-area {
+            background-color: var(--color-background-light);
+            border: 1px solid var(--color-gray-border);
+            border-radius: 20px; /* Más redondeado */
+            padding: 35px; /* Más padding */
+            box-shadow: 0 10px 30px var(--color-shadow-light);
+            transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+        }
+
+        .coverage-area:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px var(--color-shadow-medium);
+            border-color: var(--color-primary-green);
+        }
+
+        .coverage-area h3 {
+            color: var(--color-dark-green);
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 18px; /* Más espacio */
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--color-light-green); /* Línea más gruesa */
+            font-size: 2em;
+        }
+
+        .coverage-area h3 i {
+            font-size: 1.5em; /* Icono más grande */
+            color: var(--color-primary-green);
+        }
+
+        .coverage-area h4 {
+            color: var(--color-text-dark);
+            margin-top: 30px;
+            margin-bottom: 18px;
+            font-weight: 700;
+            border-bottom: 1px dashed var(--color-gray-border); /* Borde más sutil */
+            padding-bottom: 10px;
+            font-size: 1.7em;
+        }
+
+        /* Styling for individual list items to make them look like cards/rows */
+        .coverage-area ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .coverage-area ul li {
+            margin-bottom: 8px; /* Small margin between items */
+            padding: 18px 20px; /* Increased padding for more space */
+            border: 1px solid rgba(0,0,0,0.05); /* Subtle border for each item */
+            border-radius: 8px; /* Rounded corners for each item */
+            display: flex; /* Use flexbox for alignment */
+            justify-content: space-between;
+            align-items: center; /* Vertically center content */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Subtle initial shadow */
+        }
+
+        .coverage-area ul li:last-child {
+            margin-bottom: 0; /* No margin for the last item */
+        }
+
+        .coverage-area ul li:hover {
+            background-color: rgba(0,0,0,0.03); /* Slightly more visible hover */
+            transform: translateX(5px); /* Subtle slide effect */
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1); /* More pronounced shadow on hover */
+        }
+
+        .coverage-area ul li .item-name {
+            font-size: 1.05em;
+            color: var(--color-text-dark); /* Darker text for item name */
+            flex-grow: 1; /* Allow name to take available space */
+            line-height: 1.5;
+            padding-right: 15px; /* Space between name and price */
+        }
+
+        .coverage-area ul li .item-name a {
+            font-weight: 600;
+            color: var(--color-text-dark);
+        }
+        .coverage-area ul li .item-name a:hover {
+            color: var(--color-primary-green);
+            text-decoration: underline;
+        }
+
+        .coverage-area ul li .item-price {
+            font-weight: 700;
+            color: var(--color-primary-green);
+            white-space: nowrap; /* Keep price on one line */
+            font-size: 1.1em; /* Slightly larger price */
+            flex-shrink: 0; /* Prevent price from shrinking */
+        }
+
+        /* Rates Section (Tarifas Detalladas por Medio) */
+        .rates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); /* Min ancho de 380px */
+            gap: 45px; /* Más espacio */
+            margin-top: 60px;
+        }
+
+        .rate-category {
+            background-color: var(--color-background-light);
+            border: 1px solid var(--color-gray-border);
+            border-radius: 20px; /* Más redondeado */
+            padding: 40px; /* Más padding */
+            box-shadow: 0 10px 30px var(--color-shadow-light);
+            transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .rate-category.full-width {
+            grid-column: 1 / -1; /* Ocupa todo el ancho en el grid */
+        }
+
+        .rate-category:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px var(--color-shadow-medium);
+            border-color: var(--color-primary-green);
+        }
+
+        .rate-category h3 {
+            color: var(--color-dark-green);
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--color-light-green);
+            font-size: 2em;
+        }
+
+        .rate-category h3 i {
+            font-size: 1.5em;
+            color: var(--color-primary-green);
+        }
+
+        .rate-category h4 {
+            color: var(--color-text-dark);
+            margin-top: 30px;
+            margin-bottom: 18px;
+            font-weight: 700;
+            font-size: 1.7em;
+        }
+
+        /* Styling for individual list items in rates */
+        .rate-category ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .rate-category ul li {
+            margin-bottom: 8px; /* Small margin between items */
+            padding: 18px 20px; /* Increased padding for more space */
+            border: 1px solid rgba(0,0,0,0.05); /* Subtle border for each item */
+            border-radius: 8px; /* Rounded corners for each item */
+            display: flex; /* Use flexbox for alignment */
+            justify-content: space-between;
+            align-items: center; /* Vertically center content */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Subtle initial shadow */
+        }
+
+        .rate-category ul li:last-child {
+            margin-bottom: 0; /* No margin for the last item */
+        }
+
+        .rate-category ul li:hover {
+            background-color: rgba(0,0,0,0.03); /* Slightly more visible hover */
+            transform: translateX(5px); /* Subtle slide effect */
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1); /* More pronounced shadow on hover */
+        }
+
+        .rate-category ul li .item-name {
+            font-size: 1.1em;
+            color: var(--color-text-dark);
+            flex-grow: 1;
+            line-height: 1.5;
+            padding-right: 15px;
+        }
+
+        .rate-category ul li .item-price {
+            font-weight: 700;
+            color: var(--color-primary-green);
+            white-space: nowrap;
+            font-size: 1.15em; /* Slightly larger price */
+            flex-shrink: 0;
+        }
+
+        .rate-category p {
+            font-size: 1.05em;
+            color: var(--color-text-medium);
+            line-height: 1.6;
+        }
+
+        /* Tables within Rates Section */
+        .table-responsive {
+            overflow-x: auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid var(--color-gray-border);
+        }
+
+        .rate-category table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1em;
+            min-width: 450px; /* Asegura que la tabla no se comprima demasiado */
+        }
+
+        .rate-category table th,
+        .rate-category table td {
+            border: 1px solid var(--color-gray-border);
+            padding: 15px 20px; /* Más padding */
+            text-align: left;
+        }
+
+        .rate-category table th {
+            background-color: var(--color-light-green);
+            color: var(--color-dark-green);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            font-size: 0.95em;
+        }
+
+        .rate-category table td span {
+            font-weight: 700;
+            color: var(--color-primary-green);
+        }
+        .rate-category table tr:nth-child(even) {
+            background-color: #f8f9fa; /* Rayas para legibilidad */
+        }
+
+
+        /* Packages Section */
+        .packages {
+            background-color: var(--color-light-green);
+        }
+
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Min ancho de 350px */
+            gap: 50px; /* Más espacio */
+            margin-top: 60px;
+        }
+
+        .package-card {
+            background-color: var(--color-background-light);
+            border-radius: 20px; /* Más redondeado */
+            box-shadow: 0 12px 35px var(--color-shadow-medium); /* Sombra más fuerte */
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+        }
+
+        .package-card.featured-package {
+            border: 5px solid var(--color-primary-green); /* Borde más grueso */
+            transform: scale(1.04); /* Más zoom */
+            box-shadow: 0 18px 45px rgba(40, 167, 69, 0.35); /* Sombra con color */
+        }
+
+        .package-card:hover {
+            transform: translateY(-20px); /* Más elevación */
+            box-shadow: 0 22px 55px var(--color-shadow-strong);
+        }
+
+        .package-card.featured-package:hover {
+            transform: translateY(-25px) scale(1.05); /* Más elevación y escala */
+            box-shadow: 0 25px 60px rgba(40, 167, 69, 0.45);
+        }
+
+        .package-header {
+            background-color: var(--color-dark-green);
+            color: var(--color-text-light);
+            padding: 45px 30px; /* Más padding */
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .package-header::before { /* Efecto de fondo sutil */
+            content: '';
+            position: absolute;
+            top: -60%;
+            left: -60%;
+            width: 220%;
+            height: 220%;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(45deg);
+            opacity: 0.15;
+        }
+
+        .package-header h3 {
+            color: white;
+            font-size: 2.5em; /* Título más grande */
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            font-weight: 800;
+        }
+
+        .package-header .price {
+            font-size: 3.8em; /* Precio más grande */
+            font-weight: 900;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .package-header .discount {
+            font-size: 1.3em; /* Descuento más grande */
+            font-weight: 600;
+            opacity: 0.98;
+            position: relative;
+            z-index: 1;
+        }
+
+        .package-features {
+            list-style: none;
+            padding: 40px; /* Más padding */
+            margin: 0;
+            flex-grow: 1;
+            background-color: var(--color-background-light);
+        }
+
+        .package-features li {
+            margin-bottom: 20px;
+            font-size: 1.15em; /* Más grande */
+            color: var(--color-text-dark);
+            display: flex;
+            align-items: flex-start; /* Alinear al inicio del texto */
+            line-height: 1.6;
+        }
+
+        .package-features li i {
+            color: var(--color-primary-green);
+            margin-right: 18px; /* Más espacio */
+            font-size: 1.4em; /* Icono más grande */
+            margin-top: 4px; /* Ajuste vertical */
+        }
+
+        .package-footer {
+            padding: 30px 40px 40px 40px; /* Más padding */
+            text-align: center;
+            background-color: var(--color-background-light);
+        }
+
+        .package-footer .btn {
+            width: 95%; /* Botón más ancho */
+            font-size: 1.2em; /* Botón más grande */
+            padding: 20px 0;
+        }
+
+
+        /* Partners Section */
+        .partners .partner-logos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Logos más grandes */
+            gap: 50px; /* Más espacio */
+            margin-top: 60px;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .partners .partner-logos-grid img {
+            max-width: 90%;
+            height: auto;
+            max-height: 140px; /* Limita la altura para uniformidad */
+            filter: grayscale(100%);
+            opacity: 0.5;
+            transition: filter 0.4s ease, opacity 0.4s ease, transform 0.3s ease;
+        }
+
+        .partners .partner-logos-grid img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--color-background-light);
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 30px; /* Más espacio */
+            max-width: 800px; /* Más ancho */
+            margin: 60px auto;
+            background-color: #fefefe; /* Blanco casi puro */
+            padding: 60px; /* Más padding */
+            border-radius: 20px; /* Más redondeado */
+            box-shadow: 0 15px 40px var(--color-shadow-medium); /* Sombra más fuerte */
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 0;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 12px;
+            font-weight: 700;
+            color: var(--color-text-dark);
+            font-size: 1.1em;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 20px; /* Más padding */
+            border: 1px solid var(--color-gray-border);
+            border-radius: 12px; /* Más redondeado */
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.1em;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-form input[type="text"]:focus,
+        .contact-form input[type="email"]:focus,
+        .contact-form textarea:focus {
+            border-color: var(--color-primary-green);
+            box-shadow: 0 0 0 5px rgba(40, 167, 69, 0.3); /* Sombra de enfoque más visible */
+            outline: none;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 180px; /* Altura mínima más grande */
+        }
+
+        .contact-form button {
+            margin-top: 40px;
+            width: auto;
+            justify-self: center;
+            padding: 20px 55px; /* Botón más grande */
+            font-size: 1.3em;
+        }
+
+        .contact-details {
+            text-align: center;
+            margin-top: 70px; /* Más espacio */
+            font-size: 1.3em;
+            color: var(--color-text-medium);
+            line-height: 1.7;
+        }
+
+        .contact-details p {
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px; /* Más espacio */
+        }
+
+        .contact-details p i {
+            color: var(--color-primary-green);
+            font-size: 1.6em; /* Icono más grande */
+        }
+
+        .contact-details p a {
+            color: var(--color-text-dark);
+            font-weight: 600;
+        }
+        .contact-details p a:hover {
+            color: var(--color-primary-green);
+            text-decoration: underline;
+        }
+
+
+        /* Footer */
+        .main-footer {
+            background-color: var(--color-background-dark);
+            color: var(--color-text-light);
+            text-align: center;
+            padding: 60px 0; /* Más padding */
+            font-size: 1em;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.25); /* Sombra superior */
+        }
+
+        .main-footer p {
+            margin-bottom: 30px;
+            opacity: 0.95;
+            color: var(--color-text-light);
+        }
+
+        .footer-social a {
+            color: var(--color-text-light);
+            font-size: 2em; /* Iconos más grandes */
+            margin: 0 18px; /* Más espacio */
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            color: var(--color-primary-green);
+            transform: translateY(-7px); /* Efecto de elevación */
+        }
+
+
+        /* Media Queries para Responsividad */
+        @media (max-width: 1024px) {
+            h1 { font-size: 3.5em; }
+            h2 { font-size: 2.5em; }
+            .section-title { font-size: 2.5em; }
+            .section-description { font-size: 1.1em; }
+            .hero h1 { font-size: 4em; }
+            .hero h2 { font-size: 2.2em; }
+            .hero p { font-size: 1.3em; }
+            .hero .btn { font-size: 1.2em; padding: 18px 40px; }
+            .main-header .logo img { height: 55px; }
+            .main-nav ul li { margin-left: 30px; }
+        }
+
+        @media (max-width: 992px) {
+            .main-nav { display: none; }
+            /* Se elimina el botón de WhatsApp del header, por lo que no es necesario ocultarlo */
+            .mobile-menu-toggle { display: block; }
+            .about-us .alliance-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 50px;
+            }
+            .about-us .alliance-text,
+            .about-us .alliance-logos-display {
+                min-width: unset;
+                width: 100%;
+            }
+            .coverage-grid, .rates-grid, .package-grid, .partner-logos-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 35px;
+            }
+            .rate-category.full-width {
+                grid-column: auto;
+            }
+            .package-card.featured-package {
+                transform: none;
+                box-shadow: 0 12px 35px var(--color-shadow-medium);
+                border: 4px solid var(--color-primary-green);
+            }
+            .package-card.featured-package:hover {
+                transform: translateY(-15px);
+                box-shadow: 0 18px 45px rgba(40, 167, 69, 0.35);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 3em; }
+            h2 { font-size: 2.2em; }
+            h3 { font-size: 1.8em; }
+            section { padding: 80px 0; }
+            .section-title { margin-bottom: 50px; font-size: 2.2em; padding-bottom: 20px; }
+            .section-description { margin-bottom: 60px; font-size: 1.05em; }
+
+            .hero h1 { font-size: 3.5em; }
+            .hero h2 { font-size: 1.8em; }
+            .hero p { font-size: 1.2em; }
+            .hero .btn { font-size: 1.1em; padding: 15px 35px; }
+
+            .floating-whatsapp-button {
+                width: 60px; height: 60px; font-size: 2.2em; bottom: 25px; right: 25px;
+            }
+            .mobile-nav-content { padding: 35px; }
+            .mobile-nav-content ul li a { font-size: 1.6em; }
+            .close-mobile-menu { font-size: 2em; }
+
+            .services-overview .service-item { padding: 30px; }
+            .services-overview .service-item i { font-size: 3.5em; }
+            .services-overview .service-item h3 { font-size: 1.7em; }
+
+            .coverage-grid, .rates-grid, .package-grid, .partner-logos-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .coverage-area { padding: 25px; }
+            .coverage-area h3 { font-size: 1.6em; }
+            .coverage-area h4 { font-size: 1.3em; }
+
+            /* Adjustments for smaller screens for list items */
+            .coverage-area ul li,
+            .rate-category ul li {
+                flex-direction: column; /* Stack name and price */
+                align-items: flex-start; /* Align text to the left */
+                padding: 10px 15px; /* Adjust padding for smaller screens */
+            }
+            .coverage-area ul li .item-price,
+            .rate-category ul li .item-price {
+                margin-top: 5px; /* Small space between name and price when stacked */
+                margin-left: 0;
+            }
+            .coverage-area ul li .item-name,
+            .rate-category ul li .item-name {
+                padding-right: 0;
+                width: 100%; /* Take full width when stacked */
+            }
+
+
+            .rates-grid { gap: 30px; }
+            .rate-category { padding: 30px; }
+            .rate-category h3 { font-size: 1.6em; }
+            .rate-category h4 { font-size: 1.3em; }
+            .rate-category table { font-size: 0.8em; min-width: 100%; }
+            .rate-category table th, .rate-category table td { padding: 10px 15px; }
+
+            .package-header h3 { font-size: 1.9em; }
+            .package-header .price { font-size: 2.8em; }
+            .package-features li { font-size: 0.95em; }
+            .package-footer .btn { font-size: 1em; padding: 14px 0; }
+
+            .partners .partner-logos-grid img { max-height: 100px; }
+
+            .contact-form { padding: 30px; margin: 40px auto; }
+            .contact-form label { font-size: 1em; }
+            .contact-form input, .contact-form textarea { padding: 12px; font-size: 0.95em; }
+            .contact-form textarea { min-height: 120px; }
+            .contact-form button { padding: 12px 35px; font-size: 1.05em; margin-top: 25px; }
+            .contact-details p { font-size: 1em; }
+            .footer-social a { font-size: 1.5em; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header y Navegación Principal -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo-cavlir.png" alt="Logo de Cambiando Vidas LR S.A.S.">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nuestra Alianza</a></li>
+                    <li><a href="#servicios">Servicios Clave</a></li>
+                    <li><a href="#cobertura">Cobertura y Medios</a></li>
+                    <li><a href="#tarifas">Tarifas por Medio</a></li>
+                    <li><a href="#paquetes">Paquetes</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <!-- Menú hamburguesa para móviles -->
+            <button class="mobile-menu-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Menú móvil desplegable -->
+        <div class="mobile-nav-overlay">
+            <div class="mobile-nav-content">
+                <button class="close-mobile-menu" aria-label="Cerrar menú">
+                    <i class="fas fa-times"></i>
+                </button>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nuestra Alianza</a></li>
+                    <li><a href="#servicios">Servicios Clave</a></li>
+                    <li><a href="#cobertura">Cobertura y Medios</a></li>
+                    <li><a href="#tarifas">Tarifas por Medio</a></li>
+                    <li><a href="#paquetes">Paquetes</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <a href="https://wa.me/573145092255" target="_blank" class="btn whatsapp-mobile-button">
+                    <i class="fab fa-whatsapp"></i> Contáctanos
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Botón flotante de WhatsApp (para móvil y escritorio) -->
+    <a href="https://wa.me/573145092255" target="_blank" class="floating-whatsapp-button" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Sección de Héroe / Bienvenida -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h1>Cambiando Vidas LR S.A.S.: Potenciando Tu Comunicación Estratégica</h1>
+            <h2>Tu Mensaje, Nuestro Alcance. Alianza Estratégica con El Informativo LA REGIÓN.</h2>
+            <p>En **Cambiando Vidas LR S.A.S.**, conectamos tu marca con millones de oyentes y espectadores. A través de nuestra red inigualable de medios tradicionales y digitales, aseguramos que tu mensaje resuene en Colombia y el mundo.</p>
+            <a href="#paquetes" class="btn btn-primary">Descubre Nuestros Paquetes</a>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Nosotros / Nuestra Alianza -->
+    <section id="nosotros" class="about-us">
+        <div class="container">
+            <h2 class="section-title">Nuestra Alianza Estratégica</h2>
+            <div class="alliance-content">
+                <div class="alliance-text">
+                    <p>En **Cambiando Vidas LR S.A.S.** (NIT. 901777314-0, Representante legal: Martha Liliana Rodríguez Romo), hemos forjado una alianza estratégica con El Informativo LA REGIÓN para ofrecerte una experiencia y cobertura mediática sin precedentes en Colombia. Esta unión combina nuestra visión innovadora en gestión de comunicación con la trayectoria consolidada de El Informativo LA REGIÓN, permitiéndonos llevar tu mensaje mucho más allá y asegurar su impacto.</p>
+                    <p><strong>El Informativo LA REGIÓN</strong>, con 15 años de experiencia, inició con un periódico impreso a color en Yarumal, Antioquia (ISNN 2248-8979). Su evolución ha sido constante, expandiendo su alcance a plataformas digitales robustas como YouTube, Blogger, Facebook, Instagram, Twitter, LinkedIn, Spotify y Rumble, consolidándose como un referente informativo.</p>
+                    <p>Entre sus primeros clientes destacados se encuentran la Asamblea Departamental de Antioquia, Gobernación de Antioquia, Alcaldía de Yarumal, Concejo de Medellín y el Hospital San Juan de Dios de Yarumal, lo que demuestra su sólida trayectoria y confianza en el sector público y privado.</p>
+                    <p>La expansión de El Informativo LA REGIÓN incluye la creación de su emisora Online, el portal de noticias <a href="http://www.prensalaregion.com" target="_blank">www.prensalaregion.com</a>, el Magazín La Región en Facebook, el Noticiero Estelar internacional La Región, y el canal digital de Televisión <a href="http://www.laregiontv.com" target="_blank">www.laregiontv.com</a>, todos debidamente registrados en Cámara de Comercio.</p>
+                    <p>A través de esta alianza estratégica, **Cambiando Vidas LR S.A.S.**, respaldada por la vasta experiencia de El Informativo LA REGIÓN, se enfoca en diseñar y ejecutar campañas de comunicación que maximicen la difusión de tus mensajes clave. Nuestra vasta red de más de 40 alianzas de medios en Colombia nos permite asegurar un impacto significativo y fortalecer tu vínculo con la comunidad, promoviendo la transparencia, la inclusión y el acceso a información vital.</p>
+                </div>
+                <div class="alliance-logos-display">
+                    <!-- Ruta corregida para el logo del informativo -->
+                    <img src="images/logo.jpg" alt="Logo de El Informativo LA REGIÓN" class="alliance-logo-large">
+                    <p class="alliance-tagline">Juntos, una estrategia de comunicación integral que promueve transparencia, inclusión y acceso a información clave.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios Clave (general) -->
+    <section id="servicios" class="services-overview">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios Clave</h2>
+            <p class="section-description">En **Cambiando Vidas LR S.A.S.**, nos dedicamos a que cada campaña, convocatoria y servicio de su entidad alcance la máxima visibilidad. Reflejamos su mensaje en nuestra extensa red de medios: prensa escrita y digital, radio FM y digital, y portales de noticias. Complementamos su estrategia con la inclusión en nuestros magazines radiales de alto impacto: "Hablemos claro" en <a href="http://www.recnoticias.com" target="_blank">www.recnoticias.com</a> (en alianza con múltiples medios y plataformas, superando los 400.000 oyentes), y "Hablemos en serio con Fredy Gómez" en <a href="http://www.canicaradio.com" target="_blank">www.canicaradio.com</a> (todos los jueves a las 2:00 p.m. con más de 200.000 oyentes). Con esta sinergia de medios propios y aliados, desarrollamos una comunicación integral que fortalece su conexión con el público, promoviendo la transparencia y el acceso efectivo a la información.</p>
+            <div class="service-grid">
+                <div class="service-item">
+                    <i class="fas fa-tv"></i>
+                    <h3>Espacios en TV Digital</h3>
+                    <p>Anuncios y programas estratégicos en nuestro canal digital de televisión, para una audiencia global.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-globe"></i>
+                    <h3>Publicaciones Web</h3>
+                    <p>Máxima visibilidad en nuestras 3 páginas web y portales de noticias aliados, con alto tráfico y alcance garantizado.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-share-alt"></i>
+                    <h3>Gestión de Redes Sociales</h3>
+                    <p>Publicaciones diarias y estratégicas en las principales plataformas para mantener su marca activa, relevante y en constante interacción.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-video"></i>
+                    <h3>Anuncios de Video Publicitarios</h3>
+                    <p>Producción y difusión semanal de videos impactantes y profesionales diseñados para captar la atención de su público objetivo.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-microphone-alt"></i>
+                    <h3>Anuncios de Radio Publicitarios</h3>
+                    <p>Cuñas radiales semanales de alta calidad en nuestra extensa red de emisoras FM y online, asegurando un alcance masivo.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Menciones y Presencia de Marca</h3>
+                    <p>Fortalecimiento continuo de su marca a través de menciones estratégicas y destacadas en todas nuestras radios aliadas.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-newspaper"></i>
+                    <h3>Prensa Escrita y Digital</h3>
+                    <p>Difusión efectiva de su información en periódicos impresos y digitales, así como en revistas especializadas de amplio reconocimiento.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-podcast"></i>
+                    <h3>Magazines Radiales</h3>
+                    <p>Participación destacada en "Hablemos claro" (más de 400.000 oyentes) y "Hablemos en serio con Fredy Gómez" (más de 200.000 oyentes), para un impacto directo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Cobertura Regional y Medios Aliados -->
+    <section id="cobertura" class="coverage-section">
+        <div class="container">
+            <h2 class="section-title">Nuestra Cobertura Regional y Medios Aliados</h2>
+            <p class="section-description">Gracias a una robusta red de más de 40 alianzas estratégicas, **Cambiando Vidas LR S.A.S.** garantiza que su mensaje alcance cada rincón de Colombia, maximizando su impacto a nivel nacional.</p>
+
+            <div class="coverage-grid">
+                <!-- Departamento de Antioquia -->
+                <div class="coverage-area">
+                    <h3><i class="fas fa-map-marker-alt"></i> Departamento de Antioquia</h3>
+                    <h4>Emisoras Comunitarias en FM:</h4>
+                    <ul>
+                        <li>
+                            <span class="item-name">Nordeste Stereo, Remedios: Cuña 20 seg.</span>
+                            <span class="item-price">$22.500</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Buritica Stereo, Buriticá: Cuña 20 seg.</span>
+                            <span class="item-price">$22.500</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Segovia Stereo, Segovia: Cuña 20 seg.</span>
+                            <span class="item-price">$21.250</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Yali Stereo, Yalí: Cuña 20 seg.</span>
+                            <span class="item-price">$21.250</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Brillante Stereo, Barbosa: Cuña 20 seg.</span>
+                            <span class="item-price">$25.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Alternativa Stereo, Girardota: Cuña 20 seg.</span>
+                            <span class="item-price">$25.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Magna Stereo, Envigado: Cuña 20 seg.</span>
+                            <span class="item-price">$37.500</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Radio San Buenaventura Stereo, Bello: Cuña 20 seg.</span>
+                            <span class="item-price">$37.500</span>
+                        </li>
+                        <li>
+                            <span class="item-name">AR Stereo, Barrio La Floresta: Cuña 20 seg.</span>
+                            <span class="item-price">$33.750</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Anori Stereo, Anorí: Cuña 20 seg.</span>
+                            <span class="item-price">$31.250</span>
+                        </li>
+                    </ul>
+                    <h4>Plataforma Digital:</h4>
+                    <ul>
+                        <li>
+                            <span class="item-name">FACETA 5 (Barbosa): 26.000 seguidores. Publicidad</span>
+                            <span class="item-price">$250.000</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Bajo Cauca -->
+                <div class="coverage-area">
+                    <h3><i class="fas fa-map-marker-alt"></i> Bajo Cauca</h3>
+                    <ul>
+                        <li>
+                            <span class="item-name">Emisora Cáceres Stereo: Cuña 20 seg.</span>
+                            <span class="item-price">$22.500</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Emisora Caucasia Stereo: Cuña 20 seg.</span>
+                            <span class="item-price">$22.500</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Emisora El Bagre Digital Estero: Cuña 20 seg.</span>
+                            <span class="item-price">$22.500</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Emisora Tarazà Stereo: Cuña 20 seg.</span>
+                            <span class="item-price">$25.000</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Magdalena Medio -->
+                <div class="coverage-area">
+                    <h3><i class="fas fa-map-marker-alt"></i> Magdalena Medio</h3>
+                    <ul>
+                        <li>
+                            <span class="item-name">Emisora La Voz Gabrielista, Caracolí: Cuña 20 seg.</span>
+                            <span class="item-price">$22.500</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Emisora Maceo Stereo, Maceo: Cuña 20 seg.</span>
+                            <span class="item-price">$21.250</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Emisora Puerto Berrio Stereo, Puerto Berrío: Cuña 20 seg.</span>
+                            <span class="item-price">$31.250</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Norte -->
+                <div class="coverage-area">
+                    <h3><i class="fas fa-map-marker-alt"></i> Norte</h3>
+                    <ul>
+                        <li>
+                            <span class="item-name">Emisora La Voz de Don Matías: Cuña 20 seg.</span>
+                            <span class="item-price">$25.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Radio Primavera, Gómez Plata: Cuña 20 seg.</span>
+                            <span class="item-price">$25.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Emisora Radio Más, Santa Rosa de Osos: Cuña 20 seg.</span>
+                            <span class="item-price">$37.500</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Emisora Cerro Azul de Yarumal: Cuña 20 seg.</span>
+                            <span class="item-price">$31.250</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Occidente -->
+                <div class="coverage-area">
+                    <h3><i class="fas fa-map-marker-alt"></i> Occidente</h3>
+                    <ul>
+                        <li>
+                            <span class="item-name">Ecos de Frontino: Cuña 20 seg.</span>
+                            <span class="item-price">$21.250</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Ondas del Tonusco, Santa Fe de Antioquia: Cuña 20 seg.</span>
+                            <span class="item-price">$25.000</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Oriente -->
+                <div class="coverage-area">
+                    <h3><i class="fas fa-map-marker-alt"></i> Oriente</h3>
+                    <ul>
+                        <li>
+                            <span class="item-name">Emisora Guarne Stereo: Cuña 20 seg.</span>
+                            <span class="item-price">$25.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Radio Galáctica Stereo, Marinilla: Cuña 20 seg.</span>
+                            <span class="item-price">$22.500</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Emisora Fénix de Oriente: Cuña 20 seg.</span>
+                            <span class="item-price">$22.500</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Emisora Rionegro Stereo: Cuña 20 seg.</span>
+                            <span class="item-price">$25.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Viboral Televisión: Cuña 20 seg.</span>
+                            <span class="item-price">$87.500</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Suroeste -->
+                <div class="coverage-area">
+                    <h3><i class="fas fa-map-marker-alt"></i> Suroeste</h3>
+                    <ul>
+                        <li>
+                            <span class="item-name">Omega Digital, Andes: Cuña 20 seg.</span>
+                            <span class="item-price">$31.250</span>
+                        </li>
+                        <li>
+                            <span class="item-name">La Voz del Suroeste, Jericó: Cuña 20 seg.</span>
+                            <span class="item-price">$25.000</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Urabá -->
+                <div class="coverage-area">
+                    <h3><i class="fas fa-map-marker-alt"></i> Urabá</h3>
+                    <ul>
+                        <li>
+                            <span class="item-name">Radio Litoral, Turbo: Cuña 20 seg.</span>
+                            <span class="item-price">$31.250</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Banana Stereo, Chigorodó: Cuña 20 seg.</span>
+                            <span class="item-price">$31.250</span>
+                        </li>
+                        <li>
+                            <span class="item-name">La Reina Internacional, Montería: Cuña 20 seg.</span>
+                            <span class="item-price">$25.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Apartadó Stereo: Cuña 20 seg.</span>
+                            <span class="item-price">$28.750</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Chocó -->
+                <div class="coverage-area">
+                    <h3><i class="fas fa-map-marker-alt"></i> Chocó</h3>
+                    <ul>
+                        <li>
+                            <span class="item-name">Emisora Ecos del Atrato: Cuña 20 seg.</span>
+                            <span class="item-price">$22.500</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Departamento de Cundinamarca -->
+                <div class="coverage-area">
+                    <h3><i class="fas fa-map-marker-alt"></i> Departamento de Cundinamarca</h3>
+                    <ul>
+                        <li>
+                            <span class="item-name">Ecos de Rosario, Anolaima: 5 cuñas diarias de 30 seg. (30 días)</span>
+                            <span class="item-price">$2.250.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Unilatina Radio, Facatativá: 5 cuñas diarias de 30 seg. (30 días)</span>
+                            <span class="item-price">$4.250.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Magazine "Hablemos en serio con Fredy Gómez" (<a href="http://www.canicaradio.com" target="_blank">www.canicaradio.com</a>, Chía): Jueves 3:00 p.m. a 4:00 p.m. 12 cuñas (30 seg.) por 1 mes</span>
+                            <span class="item-price">$625.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Radio El Sol, Anapoima: 5 cuñas diarias de 30 seg. (30 días)</span>
+                            <span class="item-price">$2.312.500</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Radio Rumbos, Soacha: 6 cuñas de 30 seg. (30 días)</span>
+                            <span class="item-price">$1.375.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Emisora San Jacinto Stereo, Guasca: 10 cuñas diarias de 30 seg.</span>
+                            <span class="item-price">$875.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Emisora Manantial Stereo, Sutatausa: 5 cuñas diarias de 30 seg. (1 mes)</span>
+                            <span class="item-price">$1.375.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">La Voz de Cáqueza (91.6 FM y <a href="http://www.lavozdecaqueza.co" target="_blank">www.lavozdecaqueza.co</a>): 10 cuñas diarias de 30 seg. (1 mes). Cobertura en Cáqueza, Chipaque, Une, Fosca, Ubaque, Quetame, Choachí, Fomeque, Guayabetal. Publicidad en <a href="http://www.lavozdecaqueza.com" target="_blank">www.lavozdecaqueza.com</a>.</span>
+                            <span class="item-price">$1.000.000</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Emisoras Online -->
+                <div class="coverage-area">
+                    <h3><i class="fas fa-wifi"></i> Emisoras Online</h3>
+                    <ul>
+                        <li>
+                            <span class="item-name">Rec Mi Ciudad Radio, Itagüí (<a href="http://www.recmiciudadradio.com" target="_blank">www.recmiciudadradio.com</a>): Cuña 20 seg.</span>
+                            <span class="item-price">$25.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Magazine "Hablemos claro" (Lun, Mié, Vie 3:00-4:00 p.m., 400.000+ oyentes) Cuña 20 seg.</span>
+                            <span class="item-price">$50.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Jadu Radio, Barbosa (<a href="http://www.jaduradio.com" target="_blank">www.jaduradio.com</a>): Cuña 20 seg.</span>
+                            <span class="item-price">$25.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Extrema FM, Buriticá: Cuña 20 seg.</span>
+                            <span class="item-price">$25.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">La Bomba, Amalfi: Cuña 20 seg.</span>
+                            <span class="item-price">$25.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Mi Gente Stereo (<a href="http://www.migentestereo.com" target="_blank">www.migentestereo.com</a>): Cuña 20 seg.</span>
+                            <span class="item-price">$25.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Canicaradio (<a href="http://www.canicaradio.com" target="_blank">www.canicaradio.com</a>, Chía): Cuña 20 seg.</span>
+                            <span class="item-price">$56.250</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Plataformas Digitales -->
+                <div class="coverage-area">
+                    <h3><i class="fas fa-desktop"></i> Plataformas Digitales</h3>
+                    <ul>
+                        <li>
+                            <span class="item-name"><a href="http://www.cristobalnaranjo.com" target="_blank">www.cristobalnaranjo.com</a>: Cuña 20 seg.</span>
+                            <span class="item-price">$31.250</span>
+                        </li>
+                        <li>
+                            <span class="item-name"><a href="http://www.jaduradio.com" target="_blank">www.jaduradio.com</a>: Cuña 20 seg.</span>
+                            <span class="item-price">$25.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name"><a href="http://www.recmiciudadradio.com" target="_blank">www.recmiciudadradio.com</a>: Cuña 20 seg.</span>
+                            <span class="item-price">$28.750</span>
+                        </li>
+                        <li>
+                            <span class="item-name"><a href="http://www.migentestereo.com" target="_blank">www.migentestereo.com</a>: Cuña 20 seg.</span>
+                            <span class="item-price">$28.750</span>
+                        </li>
+                        <li>
+                            <span class="item-name"><a href="http://www.juanpaz.com" target="_blank">www.juanpaz.com</a>: Publicidad en página web desde</span>
+                            <span class="item-price">$375.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Publicidad en página web hasta</span>
+                            <span class="item-price">$2.250.000</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Tarifas por Medio (Medios Digitales Informativo LA REGIÓN, Sitios Web, TV Digital, Revistas, Noticieros) -->
+    <section id="tarifas" class="rates-section">
+        <div class="container">
+            <h2 class="section-title">Tarifas Detalladas por Medio</h2>
+            <p class="section-description">**Cambiando Vidas LR S.A.S.** te ofrece opciones de publicidad flexibles y de alto impacto en nuestra red de medios propios y aliados. Maximiza tu inversión con estrategias diseñadas para tu éxito.</p>
+
+            <div class="rates-grid">
+                <!-- Medios Digitales Informativo LA REGIÓN (Revista Digital) -->
+                <div class="rate-category">
+                    <h3><i class="fas fa-book-open"></i> Revista Digital Informativo LA REGIÓN (3D)</h3>
+                    <p>Leída por más de 400.000 personas (empresa privada, sector oficial, comunidades) en grupos de WhatsApp, Facebook y correos electrónicos en Colombia y el mundo.</p>
+                    <ul>
+                        <li>
+                            <span class="item-name">Página Completa:</span>
+                            <span class="item-price">$1.250.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Media Página:</span>
+                            <span class="item-price">$687.500</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Un Cuarto de Página:</span>
+                            <span class="item-price">$437.500</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Sitios Web: www.prensalaregion.com -->
+                <div class="rate-category">
+                    <h3><i class="fas fa-globe"></i> Publicidad en <a href="http://www.prensalaregion.com" target="_blank">www.prensalaregion.com</a></h3>
+                    <h4>Página Principal (Banners Animados):</h4>
+                    <ul>
+                        <li>
+                            <span class="item-name">Banner Superior (1380 x 250 PX, 15 seg.): mensuales</span>
+                            <span class="item-price">$1.000.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Banner Superior (1024 x 100 PX, 10 seg.): mensuales</span>
+                            <span class="item-price">$500.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Banner Central (500 x 250 PX, 10 seg.): mensuales</span>
+                            <span class="item-price">$375.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Banner Central (800 x 250 PX, 10 seg.): mensuales</span>
+                            <span class="item-price">$437.500</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Banner Inferior (250 x 250 PX, 10 seg.): mensuales</span>
+                            <span class="item-price">$250.000</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Sitios Web: www.laregiontv.com (Banners) -->
+                <div class="rate-category">
+                    <h3><i class="fas fa-tv"></i> Publicidad en <a href="http://www.laregiontv.com" target="_blank">www.laregiontv.com</a> (Banners)</h3>
+                    <h4>Página Principal (Banners Animados):</h4>
+                    <ul>
+                        <li>
+                            <span class="item-name">Banner Superior (1380 x 250 PX, 15 seg.): mensuales</span>
+                            <span class="item-price">$1.125.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Banner Superior (1024 x 100 PX, 10 seg.): mensuales</span>
+                            <span class="item-price">$562.500</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Banner Central (500 x 250 PX, 10 seg.): mensuales</span>
+                            <span class="item-price">$375.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Banner Central (800 x 250 PX, 10 seg.): mensuales</span>
+                            <span class="item-price">$437.500</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Banner Inferior (250 x 250 PX, 10 seg.): mensuales</span>
+                            <span class="item-price">$312.500</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Espacios en el Canal digital de Tv www.laregiontv.com -->
+                <div class="rate-category">
+                    <h3><i class="fas fa-broadcast-tower"></i> Espacios en Canal Digital de TV (<a href="http://www.laregiontv.com" target="_blank">www.laregiontv.com</a>)</h3>
+                    <ul>
+                        <li>
+                            <span class="item-name">Una hora semanal: mensual</span>
+                            <span class="item-price">$2.250.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Media hora semanal: mensual</span>
+                            <span class="item-price">$1.125.000</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Espacio en Rec Mi Ciudad Radio y Multiplataformas Digitales -->
+                <div class="rate-category">
+                    <h3><i class="fas fa-microphone-alt"></i> Propuesta Especial: Rec Mi Ciudad Radio y Multiplataformas</h3>
+                    <p>Informativo LA REGIÒN, en alianza con Radio Rec Mi Ciudad, Ondas de la Montaña y otros medios, ofrece:</p>
+                    <ul>
+                        <li>
+                            <span class="item-name">Espacio de una hora semanal en radio y multiplataformas digitales.</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Opciones de horarios flexibles y acceso a audiencia comprometida.</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Publicidad en páginas web y redes sociales (Facebook y YouTube) con formatos variados (banners, videos, podcasts).</span>
+                        </li>
+                        <li>
+                            <span class="item-name">**Beneficios:** Mayor visibilidad y reconocimiento de marca, aumento de conciencia y consideración del producto/servicio.</span>
+                        </li>
+                        <li>
+                            <span class="item-name">**Condiciones:** Pago anticipado, contrato mínimo de 3 meses, material publicitario provisto por el cliente.</span>
+                        </li>
+                        <li>
+                            <span class="item-name">**Valor del mes (4 horas mensuales):** (solo emisión).</span>
+                            <span class="item-price">$3.500.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Costo de producción y edición: por programa.</span>
+                            <span class="item-price">$500.000</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Publicidad en Redes Sociales del Informativo LA REGIÒN -->
+                <div class="rate-category">
+                    <h3><i class="fas fa-hashtag"></i> Publicidad en Redes Sociales (Informativo LA REGIÓN)</h3>
+                    <ul>
+                        <li>
+                            <span class="item-name">Instagram, Facebook, YouTube, X, Rumble: por un mes.</span>
+                            <span class="item-price">$250.000</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Revistas Digitales (Otras) -->
+                <div class="rate-category">
+                    <h3><i class="fas fa-magazine"></i> Otras Revistas Digitales</h3>
+                    <ul>
+                        <li>
+                            <span class="item-name"><a href="http://www.larevistacolombiana.com" target="_blank">www.larevistacolombiana.com</a></span>
+                        </li>
+                        <li>
+                            <span class="item-name"><a href="http://www.estilogerencial.com" target="_blank">www.estilogerencial.com</a></span>
+                        </li>
+                        <li>
+                            <span class="item-name">Precios desde</span>
+                            <span class="item-price">$500.000</span>
+                        </li>
+                        <li>
+                            <span class="item-name">hasta</span>
+                            <span class="item-price">$2.250.000</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Noticieros -->
+                <div class="rate-category">
+                    <h3><i class="fas fa-bullhorn"></i> Noticieros</h3>
+                    <ul>
+                        <li>
+                            <span class="item-name">Noticiero Al Día con Héctor Bermúdez: Cuña</span>
+                            <span class="item-price">$37.500</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Analizando con Hernando Arango: Cuña 20 seg.</span>
+                            <span class="item-price">$43.750</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Emisora La Veterana -->
+                <div class="rate-category full-width">
+                    <h3><i class="fas fa-broadcast-tower"></i> Emisora La Veterana 103.5 FM (Líbano, Tolima)</h3>
+                    <p>Cubre nueve departamentos: Tolima, Cundinamarca, Bajo Magdalena, Caldas, Huila, Santander, Meta, Arauca, Boyacá, Quindío, Risaralda, Antioquia y Cesar. Alcance internacional por la Web.</p>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Espacio Publicitario</th>
+                                    <th>Duración</th>
+                                    <th>Valor (Unitario)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Comercial en musical</td><td>30”</td><td><span>$68.750</span></td></tr>
+                                <tr><td>Comercial en noticieros</td><td>30”</td><td><span>$81.250</span></td></tr>
+                                <tr><td>Comercial en noticieros</td><td>20”</td><td><span>$68.750</span></td></tr>
+                                <tr><td>Comercial “Pal rancho”</td><td>30”</td><td><span>$68.750</span></td></tr>
+                                <tr><td>Comercial “Pal rancho”</td><td>20”</td><td><span>$50.000</span></td></tr>
+                                <tr><td>Publi reportaje</td><td>5 min</td><td><span>$1.375.000</span></td></tr>
+                                <tr><td colspan="3">Remoto: Tiempo, fecha, día y lugar; acordado por las partes para así mismo acordar el costo.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h4>Bonificados:</h4>
+                    <p>Por cada 3 pautas pagadas se bonifica 01.</p>
+                    <h4>Redes Sociales y Plataformas:</h4>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Red Social</th>
+                                    <th>La maneja</th>
+                                    <th>Alcance/Transmisión</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Facebook</td><td>SI</td><td>473 mil personas / 75,8 mil personas por publicación</td></tr>
+                                <tr><td>Instagram</td><td>SI</td><td>473 mil personas / 75,8 mil personas por publicación</td></tr>
+                                <tr><td>Página web (<a href="http://www.laveteranacentro.com" target="_blank">www.laveteranacentro.com</a>)</td><td>SI</td><td>Más de 6.800.000 visitas</td></tr>
+                                <tr><td>Página web (<a href="http://www.enfoqueregional.com" target="_blank">www.enfoqueregional.com</a>)</td><td>SI</td><td></td></tr>
+                                <tr><td>Canal de TV propio (Canal 01)</td><td>SI</td><td>Fibra Plus Líbano Tolima (más de 2.700 afiliados)</td></tr>
+                                <tr><td>APP La Veterana</td><td>SI</td><td>Play Store y App Store</td></tr>
+                                <tr><td>Radio Box</td><td>SI</td><td>Alcance internacional por la Web</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Paquetes de Servicios -->
+    <section id="paquetes" class="packages">
+        <div class="container">
+            <h2 class="section-title">Nuestros Paquetes de Comunicación</h2>
+            <p class="section-description">**Cambiando Vidas LR S.A.S.** ha diseñado planes estratégicos para maximizar tu impacto y alcance. Explora nuestras opciones flexibles y aprovecha descuentos exclusivos para potenciar tu presencia mediática.</p>
+
+            <div class="package-grid">
+                <!-- Paquete 1 -->
+                <div class="package-card featured-package">
+                    <div class="package-header">
+                        <h3>Paquete 1</h3>
+                        <p class="price">$1.748.750</p>
+                        <p class="discount">25% Dcto. por 3 meses</p>
+                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check-circle"></i> Espacios en TV digital</li>
+                        <li><i class="fas fa-check-circle"></i> Publicaciones en nuestras 3 páginas web</li>
+                        <li><i class="fas fa-check-circle"></i> Publicaciones Diarias en Redes Sociales</li>
+                        <li><i class="fas fa-check-circle"></i> Anuncio de video Publicitario semanal</li>
+                        <li><i class="fas fa-check-circle"></i> Anuncio para radio publicitario semanal</li>
+                        <li><i class="fas fa-check-circle"></i> Menciones y presencia de marca de todas nuestras radios aliadas</li>
+                    </ul>
+                    <div class="package-footer">
+                        <a href="#contacto" class="btn btn-secondary">Contratar</a>
+                    </div>
+                </div>
+
+                <!-- Paquete 2 -->
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Paquete 2</h3>
+                        <p class="price">$1.748.750</p>
+                        <p class="discount">20% Dcto. por 2 meses</p>
+                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check-circle"></i> Espacios en TV digital</li>
+                        <li><i class="fas fa-check-circle"></i> Publicaciones en nuestras 3 páginas web</li>
+                        <li><i class="fas fa-check-circle"></i> Publicaciones Diarias en Redes Sociales</li>
+                        <li><i class="fas fa-check-circle"></i> Anuncio de video Publicitario semanal</li>
+                        <li><i class="fas fa-check-circle"></i> Anuncio para radio publicitario semanal</li>
+                        <li><i class="fas fa-check-circle"></i> Menciones y presencia de marca de todas nuestras radios aliadas</li>
+                    </ul>
+                    <div class="package-footer">
+                        <a href="#contacto" class="btn btn-secondary">Contratar</a>
+                    </div>
+                </div>
+
+                <!-- Paquete 3 -->
+                <div class="package-card featured-package">
+                    <div class="package-header">
+                        <h3>Paquete 3</h3>
+                        <p class="price">$1.748.750</p>
+                        <p class="discount">40% Dcto. por 3 meses (Pago Anticipado)</p>
+                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check-circle"></i> Espacios en TV digital</li>
+                        <li><i class="fas fa-check-circle"></i> Publicaciones en nuestras 3 páginas web</li>
+                        <li><i class="fas fa-check-circle"></i> Publicaciones Diarias en Redes Sociales</li>
+                        <li><i class="fas fa-check-circle"></i> Anuncio de video Publicitario semanal</li>
+                        <li><i class="fas fa-check-circle"></i> Anuncio para radio publicitario semanal</li>
+                        <li><i class="fas fa-check-circle"></i> Menciones y presencia de marca de todas nuestras radios aliadas</li>
+                    </ul>
+                    <div class="package-footer">
+                        <a href="#contacto" class="btn btn-secondary">Contratar</a>
+                    </div>
+                </div>
+
+                <!-- Paquete 4 -->
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Paquete 4</h3>
+                        <p class="price">$1.248.750</p>
+                        <p class="discount">40% Dcto. por 3 meses (Pago Anticipado)</p>
+                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check-circle"></i> Espacios en TV digital</li>
+                        <li><i class="fas fa-check-circle"></i> Publicaciones en nuestras 3 páginas web</li>
+                        <li><i class="fas fa-check-circle"></i> Publicaciones Diarias en Redes Sociales</li>
+                        <li><i class="fas fa-check-circle"></i> Anuncio de video Publicitario semanal</li>
+                        <li><i class="fas fa-check-circle"></i> Anuncio para radio publicitario semanal</li>
+                        <!-- Este paquete no incluye menciones de radios aliadas -->
+                    </ul>
+                    <div class="package-footer">
+                        <a href="#contacto" class="btn btn-secondary">Contratar</a>
+                    </div>
+                </div>
+
+                <!-- Paquete 5 -->
+                <div class="package-card featured-package">
+                    <div class="package-header">
+                        <h3>Paquete 5</h3>
+                        <p class="price">$1.748.750</p>
+                        <p class="discount">50% Dcto. por 6 meses (Pago Anticipado)</p>
+                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check-circle"></i> Espacios en TV digital</li>
+                        <li><i class="fas fa-check-circle"></i> Publicaciones en nuestras 3 páginas web</li>
+                        <li><i class="fas fa-check-circle"></i> Publicaciones Diarias en Redes Sociales</li>
+                        <li><i class="fas fa-check-circle"></i> Anuncio de video Publicitario semanal</li>
+                        <li><i class="fas fa-check-circle"></i> Anuncio para radio publicitario semanal</li>
+                        <li><i class="fas fa-check-circle"></i> Menciones y presencia de marca de todas nuestras radios aliadas</li>
+                    </ul>
+                    <div class="package-footer">
+                        <a href="#contacto" class="btn btn-secondary">Contratar</a>
+                    </div>
+                </div>
+
+                <!-- Paquete 6 -->
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Paquete 6</h3>
+                        <p class="price">$1.248.750</p>
+                        <p class="discount">50% Dcto. por 6 meses (Pago Anticipado)</p>
+                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check-circle"></i> Espacios en TV digital</li>
+                        <li><i class="fas fa-check-circle"></i> Publicaciones en nuestras 3 páginas web</li>
+                        <li><i class="fas fa-check-circle"></i> Publicaciones Diarias en Redes Sociales</li>
+                        <li><i class="fas fa-check-circle"></i> Anuncio de video Publicitario semanal</li>
+                        <li><i class="fas fa-check-circle"></i> Anuncio para radio publicitario semanal</li>
+                        <!-- Este paquete no incluye menciones de radios aliadas -->
+                    </ul>
+                    <div class="package-footer">
+                        <a href="#contacto" class="btn btn-secondary">Contratar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Aliados Estratégicos -->
+    <section id="aliados" class="partners">
+        <div class="container">
+            <h2 class="section-title">Nuestros Aliados Estratégicos</h2>
+            <p class="section-description">En **Cambiando Vidas LR S.A.S.**, trabajamos de la mano con una red robusta de medios para garantizar la mayor cobertura y el impacto deseado para tu marca. Nuestra sinergia asegura que tu mensaje llegue a la audiencia correcta.</p>
+            <div class="partner-logos-grid">
+                <!-- Ruta corregida para la imagen de medios aliados -->
+                <img src="images/medios-aliados.jpg" alt="Logos de medios aliados de Cambiando Vidas LR S.A.S. y El Informativo La Región">
+                <!-- Si tienes logos individuales, puedes añadirlos así: -->
+                <!-- <img src="images/logo-aliado-1.jpg" alt="Logo Aliado 1"> -->
+                <!-- <img src="images/logo-aliado-2.jpg" alt="Logo Aliado 2"> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto y Formulario -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contáctanos</h2>
+            <p class="section-description">Estamos listos para impulsar tu estrategia de comunicación y llevar tu mensaje al siguiente nivel. Déjanos un mensaje o contáctanos directamente para una asesoría personalizada.</p>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre Completo</label>
+                    <input type="text" id="name" placeholder="Tu Nombre y Apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" placeholder="tu.email@ejemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Asunto</label>
+                    <input type="text" id="subject" placeholder="Motivo de tu mensaje" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Tu Mensaje</label>
+                    <textarea id="message" placeholder="Escribe tu mensaje aquí..." rows="6" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+            </form>
+            <div class="contact-details">
+                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:liliromo56@gmail.com">liliromo56@gmail.com</a></p>
+                <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+573145092255">+57 314 5092255</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> Ubicación: Bogotá, Colombia</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Cambiando Vidas LR S.A.S. Todos los derechos reservados. Alianza Estratégica con El Informativo LA REGIÓN.</p>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript para el menú móvil
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.querySelector('.mobile-nav-overlay').classList.add('active');
+        });
+
+        document.querySelector('.close-mobile-menu').addEventListener('click', function() {
+            document.querySelector('.mobile-nav-overlay').classList.remove('active');
+        });
+
+        // Cerrar menú móvil al hacer clic en un enlace
+        document.querySelectorAll('.mobile-nav-overlay ul li a').forEach(item => {
+            item.addEventListener('click', () => {
+                document.querySelector('.mobile-nav-overlay').classList.remove('active');
+            });
+        });
+
+        // Animación de scroll suave para los enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
