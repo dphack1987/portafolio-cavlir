@@ -374,11 +374,25 @@
             text-align: center;
             padding: 180px 30px; /* Más padding */
             display: flex;
+            flex-direction: column; /* Para que los elementos se apilen verticalmente */
             align-items: center;
             justify-content: center;
             min-height: 80vh; /* Altura mínima para que se vea bien */
             position: relative;
             overflow: hidden;
+        }
+
+        /* Hero Section - Cavlir Logo */
+        .hero-cavlir-logo {
+            text-align: center; /* Centra la imagen dentro del div */
+            margin-bottom: 40px; /* Espacio debajo del logo */
+        }
+
+        .hero-cavlir-logo img {
+            max-width: 250px; /* Tamaño máximo para el logo */
+            height: auto;
+            border-radius: 15px; /* Bordes redondeados */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* Sombra para destacarlo */
         }
 
         .hero h1 {
@@ -1155,6 +1169,14 @@
             .hero p { font-size: 1.2em; }
             .hero .btn { font-size: 1.1em; padding: 15px 35px; }
 
+            /* Adjustments for smaller screens for the hero logo */
+            .hero-cavlir-logo {
+                margin-bottom: 30px;
+            }
+            .hero-cavlir-logo img {
+                max-width: 180px;
+            }
+
             .floating-button {
                 width: 60px; height: 60px; font-size: 2.2em; bottom: 25px; right: 25px;
             }
@@ -1228,6 +1250,16 @@
             .contact-details p { font-size: 1em; }
             .footer-social a { font-size: 1.5em; }
         }
+
+        @media (max-width: 480px) {
+            /* Further adjustments for the hero logo on very small screens */
+            .hero-cavlir-logo {
+                margin-bottom: 20px;
+            }
+            .hero-cavlir-logo img {
+                max-width: 150px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1289,6 +1321,10 @@
     <!-- Sección de Héroe / Bienvenida -->
     <section id="inicio" class="hero">
         <div class="container">
+            <!-- Nuevo logo de Cavlir centrado en la sección Hero -->
+            <div class="hero-cavlir-logo">
+                <img src="images/logo-cavlir.png" alt="Logo de Cambiando Vidas LR S.A.S.">
+            </div>
             <h1>Cambiando Vidas LR S.A.S.: Potenciando Tu Comunicación Estratégica</h1>
             <h2>Tu Mensaje, Nuestro Alcance. Alianza Estratégica con El Informativo LA REGIÓN.</h2>
             <p>En **Cambiando Vidas LR S.A.S.**, conectamos tu marca con millones de oyentes y espectadores. A través de nuestra red inigualable de medios tradicionales y digitales, aseguramos que tu mensaje resuene en Colombia y el mundo.</p>
@@ -1310,7 +1346,7 @@
                 </div>
                 <div class="alliance-logos-display">
                     <!-- Ruta corregida para el logo del informativo -->
-                    <img src="images/logo.jpg" alt="Logo de El Informativo LA REGIÓN" class="alliance-logo-large">
+                    <img src="images/informativo.jpg" alt="Logo de El Informativo LA REGIÓN" class="alliance-logo-large">
                     <p class="alliance-tagline">Juntos, una estrategia de comunicación integral que promueve transparencia, inclusión y acceso a información clave.</p>
                 </div>
             </div>
@@ -1971,7 +2007,7 @@
                 <div class="package-card featured-package">
                     <div class="package-header">
                         <h3>Paquete 1</h3>
-                        <p class="price">$1.818.70</p>
+                        <p class="price">$1.364.025</p>
                         <p class="discount">25% Dcto. por contrato de 3 meses</p>
                     </div>
                     <p>Este paquete te ofrece una solución integral para iniciar tu presencia mediática, combinando lo mejor de la televisión digital, publicaciones web y una fuerte interacción en redes sociales, con el apoyo de anuncios de video y radio, y menciones en medios aliados para un impacto inicial significativo.</p>
@@ -1992,7 +2028,7 @@
                 <div class="package-card">
                     <div class="package-header">
                         <h3>Paquete 2</h3>
-                        <p class="price">$1.818.70</p>
+                        <p class="price">$1.454.960</p>
                         <p class="discount">20% Dcto. por contrato de 2 meses</p>
                     </div>
                     <p>Ideal para campañas de duración media, este paquete mantiene la robustez del Paquete 1 con espacios en TV digital, publicaciones web, gestión de redes sociales, anuncios de video y radio, y menciones en radios aliadas, asegurando una visibilidad constante durante un periodo clave.</p>
@@ -2013,7 +2049,7 @@
                 <div class="package-card featured-package">
                     <div class="package-header">
                         <h3>Paquete 3</h3>
-                        <p class="price">$1.818.70</p>
+                        <p class="price">$1.091.220</p>
                         <p class="discount">40% Dcto. por 3 meses (CON PAGO ANTICIPADO)</p>
                     </div>
                     <p>Maximiza tu inversión con este paquete premium que ofrece la misma amplitud de servicios que los anteriores (TV digital, web, redes sociales, video, radio y menciones en aliados), pero con un descuento significativo al realizar un pago anticipado por tres meses, garantizando una campaña prolongada y de alto impacto.</p>
@@ -2034,7 +2070,7 @@
                 <div class="package-card">
                     <div class="package-header">
                         <h3>Paquete 4</h3>
-                        <p class="price">$1.298.70</p>
+                        <p class="price">$779.220</p>
                         <p class="discount">40% Dcto. por 3 meses (Pago Anticipado)</p>
                     </div>
                     <p>Este paquete te ofrece una solución costo-efectiva con un enfoque en los medios digitales y audiovisuales. Incluye espacios en TV digital, publicaciones web, gestión de redes sociales, y anuncios de video y radio, ideal para quienes buscan una fuerte presencia online y en medios masivos sin las menciones adicionales en radios aliadas.</p>
@@ -2055,7 +2091,7 @@
                 <div class="package-card featured-package">
                     <div class="package-header">
                         <h3>Paquete 5</h3>
-                        <p class="price">$2.273.375</p>
+                        <p class="price">$909.350</p>
                         <p class="discount">50% Dcto. por 6 meses (Pago Anticipado)</p>
                     </div>
                     <p>La opción más completa para una estrategia de comunicación a largo plazo. Disfruta de todos nuestros servicios premium (TV digital, web, redes sociales, video, radio y menciones en aliados) con un descuento inigualable al comprometerte por seis meses con pago anticipado, asegurando una presencia dominante y sostenida en el mercado.</p>
@@ -2076,7 +2112,7 @@
                 <div class="package-card">
                     <div class="package-header">
                         <h3>Paquete 6</h3>
-                        <p class="price">$1.623.375</p>
+                        <p class="price">$649.350</p>
                         <p class="discount">50% Dcto. por 6 meses (Pago Anticipado)</p>
                     </div>
                     <p>Una excelente alternativa para una campaña extendida con un enfoque digital y audiovisual, sin las menciones en radios aliadas. Este paquete incluye TV digital, publicaciones web, gestión de redes sociales, y anuncios de video y radio, ofreciendo un gran valor con un descuento del 50% por seis meses con pago anticipado.</p>
@@ -2102,11 +2138,20 @@
             <h2 class="section-title">Nuestros Aliados Estratégicos</h2>
             <p class="section-description">En **Cambiando Vidas LR S.A.S.**, trabajamos de la mano con una red robusta de medios para garantizar la mayor cobertura y el impacto deseado para tu marca. Nuestra sinergia asegura que tu mensaje llegue a la audiencia correcta.</p>
             <div class="partner-logos-grid">
-                <!-- Ruta corregida para la imagen de medios aliados -->
+                <!-- Logos de medios aliados existentes -->
                 <img src="images/medios-aliados.jpg" alt="Logos de medios aliados de Cambiando Vidas LR S.A.S. y El Informativo La Región">
-                <!-- Si tienes logos individuales, puedes añadirlos así: -->
-                <!-- <img src="images/logo-aliado-1.jpg" alt="Logo Aliado 1"> -->
-                <!-- <img src="images/logo-aliado-2.jpg" alt="Logo Aliado 2"> -->
+                <!-- Nuevos logos de aliados -->
+                <img src="images/Aliado Emisora La Morenita de Tunja.png" alt="Logo Aliado Emisora La Morenita de Tunja">
+                <img src="images/Alianza 3.png" alt="Logo Alianza 3">
+                <img src="images/Ecuador_Abigail Tovar.png" alt="Logo Ecuador Abigail Tovar">
+                <img src="images/El Extramedios.png" alt="Logo El Extramedios">
+                <img src="images/IMG-20250124-W A1245.png" alt="Logo IMG-20250124-W A1245">
+                <img src="images/LA REVISTA COLOMBIANA NUEVO HORIZONTAL.png" alt="Logo La Revista Colombiana Nuevo Horizontal">
+                <img src="images/LOGO FONDO BLANCO-KABITO DOMINGUEZ.png" alt="Logo Fondo Blanco Kabito Dominguez">
+                <img src="images/logo Rec mi ciudad.png" alt="Logo Rec Mi Ciudad">
+                <img src="images/logo Red Digital de Noticias Venezuela.png" alt="Logo Red Digital de Noticias Venezuela">
+                <img src="images/Media Producciones Aliado Pereira.png" alt="Logo Media Producciones Aliado Pereira">
+                <img src="images/NUEVO LOGO DE NOTI-AMERICA.png" alt="Nuevo Logo de Noti-America">
             </div>
         </div>
     </section>
