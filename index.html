@@ -609,9 +609,10 @@
             text-decoration: underline;
         }
 
+        /* Modificación para color blanco en precios de cobertura */
         .coverage-area ul li .item-price {
             font-weight: 700;
-            color: var(--color-primary-green);
+            color: white; /* Color blanco */
             white-space: nowrap; /* Keep price on one line */
             font-size: 1.1em; /* Slightly larger price */
             flex-shrink: 0; /* Prevent price from shrinking */
@@ -656,12 +657,33 @@
             padding-bottom: 15px;
             border-bottom: 3px solid var(--color-light-green);
             font-size: 2em;
+            /* Flexbox para el título y el enlace */
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
+            align-items: flex-start; /* Alinea los ítems al inicio del contenedor flex */
         }
 
         .rate-category h3 i {
             font-size: 1.5em;
             color: var(--color-primary-green);
+            flex-shrink: 0; /* Evita que el icono se encoja */
         }
+
+        /* Estilo específico para los enlaces dentro de h3/h4 para evitar superposición */
+        .rate-category h3 a,
+        .rate-category h4 a {
+            font-size: 0.8em; /* Un poco más pequeño para que quepa mejor */
+            margin-left: 10px; /* Espacio entre el texto del título y el enlace */
+            white-space: normal; /* Permite que el texto del enlace se envuelva */
+            word-break: break-word; /* Rompe palabras largas si es necesario */
+            color: var(--color-text-medium); /* Color más sutil para el enlace */
+            text-decoration: underline; /* Subrayado para indicar que es un enlace */
+        }
+
+        .rate-category h3 a:hover,
+        .rate-category h4 a:hover {
+            color: var(--color-primary-green); /* Resalta al pasar el ratón */
+        }
+
 
         .rate-category h4 {
             color: var(--color-text-dark);
@@ -669,6 +691,9 @@
             margin-bottom: 18px;
             font-weight: 700;
             font-size: 1.7em;
+            display: flex; /* También aplicar flexbox aquí */
+            flex-wrap: wrap;
+            align-items: flex-start;
         }
 
         /* Styling for individual list items in rates */
@@ -709,9 +734,10 @@
             padding-right: 15px;
         }
 
+        /* Modificación para color blanco en precios de tarifas */
         .rate-category ul li .item-price {
             font-weight: 700;
-            color: var(--color-primary-green);
+            color: white; /* Color blanco */
             white-space: nowrap;
             font-size: 1.15em; /* Slightly larger price */
             flex-shrink: 0;
@@ -756,9 +782,10 @@
             font-size: 0.95em;
         }
 
+        /* Modificación para color blanco en precios de tablas */
         .rate-category table td span {
             font-weight: 700;
-            color: var(--color-primary-green);
+            color: white; /* Color blanco */
         }
         .rate-category table tr:nth-child(even) {
             background-color: #f8f9fa; /* Rayas para legibilidad */
@@ -833,20 +860,24 @@
             font-weight: 800;
         }
 
+        /* Modificación para color blanco en precios de paquetes */
         .package-header .price {
             font-size: 3.8em; /* Precio más grande */
             font-weight: 900;
             margin-bottom: 15px;
             position: relative;
             z-index: 1;
+            color: white; /* Color blanco */
         }
 
+        /* Modificación para color blanco en descuentos de paquetes */
         .package-header .discount {
             font-size: 1.3em; /* Descuento más grande */
             font-weight: 600;
             opacity: 0.98;
             position: relative;
             z-index: 1;
+            color: white; /* Color blanco */
         }
 
         .package-features {
@@ -1130,6 +1161,15 @@
                 width: 100%; /* Take full width when stacked */
             }
 
+            /* Adjustments for h3/h4 links on smaller screens */
+            .rate-category h3 a,
+            .rate-category h4 a {
+                margin-left: 0; /* Remove left margin when stacked */
+                margin-top: 5px; /* Add top margin when stacked */
+                font-size: 0.9em; /* Smaller font for better fit */
+                display: block; /* Make it a block element to take full width */
+            }
+
 
             .rates-grid { gap: 30px; }
             .rate-category { padding: 30px; }
@@ -1241,7 +1281,7 @@
     <section id="servicios" class="services-overview">
         <div class="container">
             <h2 class="section-title">Nuestros Servicios Clave</h2>
-            <p class="section-description">En **Cambiando Vidas LR S.A.S.**, nos dedicamos a que cada campaña, convocatoria y servicio de su entidad alcance la máxima visibilidad. Reflejamos su mensaje en nuestra extensa red de medios: prensa escrita y digital, radio FM y digital, y portales de noticias. Complementamos su estrategia con la inclusión en nuestros magazines radiales de alto impacto: "Hablemos claro" en <a href="http://www.recnoticias.com" target="_blank">www.recnoticias.com</a> (en alianza con múltiples medios y plataformas, superando los 400.000 oyentes), y "Hablemos en serio con Fredy Gómez" en <a href="http://www.canicaradio.com" target="_blank">www.canicaradio.com</a> (todos los jueves a las 2:00 p.m. con más de 200.000 oyentes). Con esta sinergia de medios propios y aliados, desarrollamos una comunicación integral que fortalece su conexión con el público, promoviendo la transparencia y el acceso efectivo a la información.</p>
+            <p class="section-description">En **Cambiando Vidas LR S.A.S.**, nos dedicamos a que cada campaña, convocatoria y servicio de su entidad alcance la máxima visibilidad. Reflejamos su mensaje en nuestra extensa red de medios: prensa escrita y digital, radio FM y digital, y portales de noticias incluyendo los dos magazines radiales que tenemos: "Hablemos claro" en <a href="http://www.recnoticias.com" target="_blank">www.recnoticias.com</a>, en alianza con varios medios en FM, multiplataforma digitales, en Facebook y YouTube con más de 400.000 oyentes. Y el otro magazine "Hablemos en serio con Fredy Gómez" en la emisora <a href="http://www.canicaradio.com" target="_blank">www.canicaradio.com</a> en Chía, Cundinamarca, todos los jueves a las 2:00 p.m. con más de 200.000 oyentes. Con todos estos medios y otros medios desarrollaremos una estrategia de comunicación integral que permita a la Agencia fortalecer su vínculo con sus clientes, promoviendo transparencia, inclusión y el acceso a información clave.</p>
             <div class="service-grid">
                 <div class="service-item">
                     <i class="fas fa-tv"></i>
@@ -1301,50 +1341,50 @@
                     <ul>
                         <li>
                             <span class="item-name">Nordeste Stereo, Remedios: Cuña 20 seg.</span>
-                            <span class="item-price">$22.500</span>
+                            <span class="item-price">$23.400</span>
                         </li>
                         <li>
                             <span class="item-name">Buritica Stereo, Buriticá: Cuña 20 seg.</span>
-                            <span class="item-price">$22.500</span>
+                            <span class="item-price">$23.400</span>
                         </li>
                         <li>
                             <span class="item-name">Segovia Stereo, Segovia: Cuña 20 seg.</span>
-                            <span class="item-price">$21.250</span>
+                            <span class="item-price">$22.100</span>
                         </li>
                         <li>
                             <span class="item-name">Yali Stereo, Yalí: Cuña 20 seg.</span>
-                            <span class="item-price">$21.250</span>
+                            <span class="item-price">$22.100</span>
                         </li>
                         <li>
                             <span class="item-name">Brillante Stereo, Barbosa: Cuña 20 seg.</span>
-                            <span class="item-price">$25.000</span>
+                            <span class="item-price">$26.000</span>
                         </li>
                         <li>
                             <span class="item-name">Alternativa Stereo, Girardota: Cuña 20 seg.</span>
-                            <span class="item-price">$25.000</span>
+                            <span class="item-price">$26.000</span>
                         </li>
                         <li>
                             <span class="item-name">Magna Stereo, Envigado: Cuña 20 seg.</span>
-                            <span class="item-price">$37.500</span>
+                            <span class="item-price">$39.000</span>
                         </li>
                         <li>
                             <span class="item-name">Radio San Buenaventura Stereo, Bello: Cuña 20 seg.</span>
-                            <span class="item-price">$37.500</span>
+                            <span class="item-price">$39.000</span>
                         </li>
                         <li>
                             <span class="item-name">AR Stereo, Barrio La Floresta: Cuña 20 seg.</span>
-                            <span class="item-price">$33.750</span>
+                            <span class="item-price">$35.100</span>
                         </li>
                         <li>
                             <span class="item-name">Anori Stereo, Anorí: Cuña 20 seg.</span>
-                            <span class="item-price">$31.250</span>
+                            <span class="item-price">$32.500</span>
                         </li>
                     </ul>
                     <h4>Plataforma Digital:</h4>
                     <ul>
                         <li>
                             <span class="item-name">FACETA 5 (Barbosa): 26.000 seguidores. Publicidad</span>
-                            <span class="item-price">$250.000</span>
+                            <span class="item-price">$260.000</span>
                         </li>
                     </ul>
                 </div>
@@ -1355,19 +1395,19 @@
                     <ul>
                         <li>
                             <span class="item-name">Emisora Cáceres Stereo: Cuña 20 seg.</span>
-                            <span class="item-price">$22.500</span>
+                            <span class="item-price">$23.400</span>
                         </li>
                         <li>
                             <span class="item-name">Emisora Caucasia Stereo: Cuña 20 seg.</span>
-                            <span class="item-price">$22.500</span>
+                            <span class="item-price">$23.400</span>
                         </li>
                         <li>
                             <span class="item-name">Emisora El Bagre Digital Estero: Cuña 20 seg.</span>
-                            <span class="item-price">$22.500</span>
+                            <span class="item-price">$23.400</span>
                         </li>
                         <li>
                             <span class="item-name">Emisora Tarazà Stereo: Cuña 20 seg.</span>
-                            <span class="item-price">$25.000</span>
+                            <span class="item-price">$26.000</span>
                         </li>
                     </ul>
                 </div>
@@ -1378,15 +1418,15 @@
                     <ul>
                         <li>
                             <span class="item-name">Emisora La Voz Gabrielista, Caracolí: Cuña 20 seg.</span>
-                            <span class="item-price">$22.500</span>
+                            <span class="item-price">$23.400</span>
                         </li>
                         <li>
                             <span class="item-name">Emisora Maceo Stereo, Maceo: Cuña 20 seg.</span>
-                            <span class="item-price">$21.250</span>
+                            <span class="item-price">$22.100</span>
                         </li>
                         <li>
                             <span class="item-name">Emisora Puerto Berrio Stereo, Puerto Berrío: Cuña 20 seg.</span>
-                            <span class="item-price">$31.250</span>
+                            <span class="item-price">$32.500</span>
                         </li>
                     </ul>
                 </div>
@@ -1396,20 +1436,20 @@
                     <h3><i class="fas fa-map-marker-alt"></i> Norte</h3>
                     <ul>
                         <li>
-                            <span class="item-name">Emisora La Voz de Don Matías: Cuña 20 seg.</span>
-                            <span class="item-price">$25.000</span>
+                            <span class="item-name">Emisora La Voz de Don Matias: Cuña 20 seg.</span>
+                            <span class="item-price">$26.000</span>
                         </li>
                         <li>
                             <span class="item-name">Radio Primavera, Gómez Plata: Cuña 20 seg.</span>
-                            <span class="item-price">$25.000</span>
+                            <span class="item-price">$26.000</span>
                         </li>
                         <li>
                             <span class="item-name">Emisora Radio Más, Santa Rosa de Osos: Cuña 20 seg.</span>
-                            <span class="item-price">$37.500</span>
+                            <span class="item-price">$39.000</span>
                         </li>
                         <li>
                             <span class="item-name">Emisora Cerro Azul de Yarumal: Cuña 20 seg.</span>
-                            <span class="item-price">$31.250</span>
+                            <span class="item-price">$32.500</span>
                         </li>
                     </ul>
                 </div>
@@ -1420,11 +1460,11 @@
                     <ul>
                         <li>
                             <span class="item-name">Ecos de Frontino: Cuña 20 seg.</span>
-                            <span class="item-price">$21.250</span>
+                            <span class="item-price">$22.100</span>
                         </li>
                         <li>
                             <span class="item-name">Ondas del Tonusco, Santa Fe de Antioquia: Cuña 20 seg.</span>
-                            <span class="item-price">$25.000</span>
+                            <span class="item-price">$26.000</span>
                         </li>
                     </ul>
                 </div>
@@ -1435,23 +1475,23 @@
                     <ul>
                         <li>
                             <span class="item-name">Emisora Guarne Stereo: Cuña 20 seg.</span>
-                            <span class="item-price">$25.000</span>
+                            <span class="item-price">$26.000</span>
                         </li>
                         <li>
                             <span class="item-name">Radio Galáctica Stereo, Marinilla: Cuña 20 seg.</span>
-                            <span class="item-price">$22.500</span>
+                            <span class="item-price">$23.400</span>
                         </li>
                         <li>
                             <span class="item-name">Emisora Fénix de Oriente: Cuña 20 seg.</span>
-                            <span class="item-price">$22.500</span>
+                            <span class="item-price">$23.400</span>
                         </li>
                         <li>
                             <span class="item-name">Emisora Rionegro Stereo: Cuña 20 seg.</span>
-                            <span class="item-price">$25.000</span>
+                            <span class="item-price">$26.000</span>
                         </li>
                         <li>
                             <span class="item-name">Viboral Televisión: Cuña 20 seg.</span>
-                            <span class="item-price">$87.500</span>
+                            <span class="item-price">$91.000</span>
                         </li>
                     </ul>
                 </div>
@@ -1462,11 +1502,11 @@
                     <ul>
                         <li>
                             <span class="item-name">Omega Digital, Andes: Cuña 20 seg.</span>
-                            <span class="item-price">$31.250</span>
+                            <span class="item-price">$32.500</span>
                         </li>
                         <li>
                             <span class="item-name">La Voz del Suroeste, Jericó: Cuña 20 seg.</span>
-                            <span class="item-price">$25.000</span>
+                            <span class="item-price">$26.000</span>
                         </li>
                     </ul>
                 </div>
@@ -1477,19 +1517,19 @@
                     <ul>
                         <li>
                             <span class="item-name">Radio Litoral, Turbo: Cuña 20 seg.</span>
-                            <span class="item-price">$31.250</span>
+                            <span class="item-price">$32.500</span>
                         </li>
                         <li>
                             <span class="item-name">Banana Stereo, Chigorodó: Cuña 20 seg.</span>
-                            <span class="item-price">$31.250</span>
+                            <span class="item-price">$32.500</span>
                         </li>
                         <li>
                             <span class="item-name">La Reina Internacional, Montería: Cuña 20 seg.</span>
-                            <span class="item-price">$25.000</span>
+                            <span class="item-price">$26.000</span>
                         </li>
                         <li>
                             <span class="item-name">Apartadó Stereo: Cuña 20 seg.</span>
-                            <span class="item-price">$28.750</span>
+                            <span class="item-price">$29.900</span>
                         </li>
                     </ul>
                 </div>
@@ -1500,7 +1540,7 @@
                     <ul>
                         <li>
                             <span class="item-name">Emisora Ecos del Atrato: Cuña 20 seg.</span>
-                            <span class="item-price">$22.500</span>
+                            <span class="item-price">$23.400</span>
                         </li>
                     </ul>
                 </div>
@@ -1511,35 +1551,35 @@
                     <ul>
                         <li>
                             <span class="item-name">Ecos de Rosario, Anolaima: 5 cuñas diarias de 30 seg. (30 días)</span>
-                            <span class="item-price">$2.250.000</span>
+                            <span class="item-price">$2.340.000</span>
                         </li>
                         <li>
                             <span class="item-name">Unilatina Radio, Facatativá: 5 cuñas diarias de 30 seg. (30 días)</span>
-                            <span class="item-price">$4.250.000</span>
+                            <span class="item-price">$4.420.000</span>
                         </li>
                         <li>
                             <span class="item-name">Magazine "Hablemos en serio con Fredy Gómez" (<a href="http://www.canicaradio.com" target="_blank">www.canicaradio.com</a>, Chía): Jueves 3:00 p.m. a 4:00 p.m. 12 cuñas (30 seg.) por 1 mes</span>
-                            <span class="item-price">$625.000</span>
+                            <span class="item-price">$650.000</span>
                         </li>
                         <li>
                             <span class="item-name">Radio El Sol, Anapoima: 5 cuñas diarias de 30 seg. (30 días)</span>
-                            <span class="item-price">$2.312.500</span>
+                            <span class="item-price">$2.405.000</span>
                         </li>
                         <li>
                             <span class="item-name">Radio Rumbos, Soacha: 6 cuñas de 30 seg. (30 días)</span>
-                            <span class="item-price">$1.375.000</span>
+                            <span class="item-price">$1.430.000</span>
                         </li>
                         <li>
                             <span class="item-name">Emisora San Jacinto Stereo, Guasca: 10 cuñas diarias de 30 seg.</span>
-                            <span class="item-price">$875.000</span>
+                            <span class="item-price">$910.000</span>
                         </li>
                         <li>
                             <span class="item-name">Emisora Manantial Stereo, Sutatausa: 5 cuñas diarias de 30 seg. (1 mes)</span>
-                            <span class="item-price">$1.375.000</span>
+                            <span class="item-price">$1.430.000</span>
                         </li>
                         <li>
                             <span class="item-name">La Voz de Cáqueza (91.6 FM y <a href="http://www.lavozdecaqueza.co" target="_blank">www.lavozdecaqueza.co</a>): 10 cuñas diarias de 30 seg. (1 mes). Cobertura en Cáqueza, Chipaque, Une, Fosca, Ubaque, Quetame, Choachí, Fomeque, Guayabetal. Publicidad en <a href="http://www.lavozdecaqueza.com" target="_blank">www.lavozdecaqueza.com</a>.</span>
-                            <span class="item-price">$1.000.000</span>
+                            <span class="item-price">$1.040.000</span>
                         </li>
                     </ul>
                 </div>
@@ -1550,31 +1590,31 @@
                     <ul>
                         <li>
                             <span class="item-name">Rec Mi Ciudad Radio, Itagüí (<a href="http://www.recmiciudadradio.com" target="_blank">www.recmiciudadradio.com</a>): Cuña 20 seg.</span>
-                            <span class="item-price">$25.000</span>
+                            <span class="item-price">$26.000</span>
                         </li>
                         <li>
                             <span class="item-name">Magazine "Hablemos claro" (Lun, Mié, Vie 3:00-4:00 p.m., 400.000+ oyentes) Cuña 20 seg.</span>
-                            <span class="item-price">$50.000</span>
+                            <span class="item-price">$52.000</span>
                         </li>
                         <li>
                             <span class="item-name">Jadu Radio, Barbosa (<a href="http://www.jaduradio.com" target="_blank">www.jaduradio.com</a>): Cuña 20 seg.</span>
-                            <span class="item-price">$25.000</span>
+                            <span class="item-price">$26.000</span>
                         </li>
                         <li>
                             <span class="item-name">Extrema FM, Buriticá: Cuña 20 seg.</span>
-                            <span class="item-price">$25.000</span>
+                            <span class="item-price">$26.000</span>
                         </li>
                         <li>
                             <span class="item-name">La Bomba, Amalfi: Cuña 20 seg.</span>
-                            <span class="item-price">$25.000</span>
+                            <span class="item-price">$26.000</span>
                         </li>
                         <li>
                             <span class="item-name">Mi Gente Stereo (<a href="http://www.migentestereo.com" target="_blank">www.migentestereo.com</a>): Cuña 20 seg.</span>
-                            <span class="item-price">$25.000</span>
+                            <span class="item-price">$29.900</span>
                         </li>
                         <li>
                             <span class="item-name">Canicaradio (<a href="http://www.canicaradio.com" target="_blank">www.canicaradio.com</a>, Chía): Cuña 20 seg.</span>
-                            <span class="item-price">$56.250</span>
+                            <span class="item-price">$58.500</span>
                         </li>
                     </ul>
                 </div>
@@ -1585,27 +1625,27 @@
                     <ul>
                         <li>
                             <span class="item-name"><a href="http://www.cristobalnaranjo.com" target="_blank">www.cristobalnaranjo.com</a>: Cuña 20 seg.</span>
-                            <span class="item-price">$31.250</span>
+                            <span class="item-price">$32.500</span>
                         </li>
                         <li>
                             <span class="item-name"><a href="http://www.jaduradio.com" target="_blank">www.jaduradio.com</a>: Cuña 20 seg.</span>
-                            <span class="item-price">$25.000</span>
+                            <span class="item-price">$26.000</span>
                         </li>
                         <li>
                             <span class="item-name"><a href="http://www.recmiciudadradio.com" target="_blank">www.recmiciudadradio.com</a>: Cuña 20 seg.</span>
-                            <span class="item-price">$28.750</span>
+                            <span class="item-price">$29.900</span>
                         </li>
                         <li>
                             <span class="item-name"><a href="http://www.migentestereo.com" target="_blank">www.migentestereo.com</a>: Cuña 20 seg.</span>
-                            <span class="item-price">$28.750</span>
+                            <span class="item-price">$29.900</span>
                         </li>
                         <li>
                             <span class="item-name"><a href="http://www.juanpaz.com" target="_blank">www.juanpaz.com</a>: Publicidad en página web desde</span>
-                            <span class="item-price">$375.000</span>
+                            <span class="item-price">$390.000</span>
                         </li>
                         <li>
                             <span class="item-name">Publicidad en página web hasta</span>
-                            <span class="item-price">$2.250.000</span>
+                            <span class="item-price">$2.340.000</span>
                         </li>
                     </ul>
                 </div>
@@ -1627,15 +1667,15 @@
                     <ul>
                         <li>
                             <span class="item-name">Página Completa:</span>
-                            <span class="item-price">$1.250.000</span>
+                            <span class="item-price">$1.300.000</span>
                         </li>
                         <li>
                             <span class="item-name">Media Página:</span>
-                            <span class="item-price">$687.500</span>
+                            <span class="item-price">$715.000</span>
                         </li>
                         <li>
                             <span class="item-name">Un Cuarto de Página:</span>
-                            <span class="item-price">$437.500</span>
+                            <span class="item-price">$455.000</span>
                         </li>
                     </ul>
                 </div>
@@ -1647,23 +1687,23 @@
                     <ul>
                         <li>
                             <span class="item-name">Banner Superior (1380 x 250 PX, 15 seg.): mensuales</span>
-                            <span class="item-price">$1.000.000</span>
+                            <span class="item-price">$1.040.000</span>
                         </li>
                         <li>
                             <span class="item-name">Banner Superior (1024 x 100 PX, 10 seg.): mensuales</span>
-                            <span class="item-price">$500.000</span>
+                            <span class="item-price">$520.000</span>
                         </li>
                         <li>
                             <span class="item-name">Banner Central (500 x 250 PX, 10 seg.): mensuales</span>
-                            <span class="item-price">$375.000</span>
+                            <span class="item-price">$390.000</span>
                         </li>
                         <li>
                             <span class="item-name">Banner Central (800 x 250 PX, 10 seg.): mensuales</span>
-                            <span class="item-price">$437.500</span>
+                            <span class="item-price">$455.000</span>
                         </li>
                         <li>
                             <span class="item-name">Banner Inferior (250 x 250 PX, 10 seg.): mensuales</span>
-                            <span class="item-price">$250.000</span>
+                            <span class="item-price">$260.000</span>
                         </li>
                     </ul>
                 </div>
@@ -1675,23 +1715,23 @@
                     <ul>
                         <li>
                             <span class="item-name">Banner Superior (1380 x 250 PX, 15 seg.): mensuales</span>
-                            <span class="item-price">$1.125.000</span>
+                            <span class="item-price">$1.170.000</span>
                         </li>
                         <li>
                             <span class="item-name">Banner Superior (1024 x 100 PX, 10 seg.): mensuales</span>
-                            <span class="item-price">$562.500</span>
+                            <span class="item-price">$585.000</span>
                         </li>
                         <li>
                             <span class="item-name">Banner Central (500 x 250 PX, 10 seg.): mensuales</span>
-                            <span class="item-price">$375.000</span>
+                            <span class="item-price">$390.000</span>
                         </li>
                         <li>
                             <span class="item-name">Banner Central (800 x 250 PX, 10 seg.): mensuales</span>
-                            <span class="item-price">$437.500</span>
+                            <span class="item-price">$455.000</span>
                         </li>
                         <li>
                             <span class="item-name">Banner Inferior (250 x 250 PX, 10 seg.): mensuales</span>
-                            <span class="item-price">$312.500</span>
+                            <span class="item-price">$325.000</span>
                         </li>
                     </ul>
                 </div>
@@ -1702,11 +1742,11 @@
                     <ul>
                         <li>
                             <span class="item-name">Una hora semanal: mensual</span>
-                            <span class="item-price">$2.250.000</span>
+                            <span class="item-price">$2.340.000</span>
                         </li>
                         <li>
                             <span class="item-name">Media hora semanal: mensual</span>
-                            <span class="item-price">$1.125.000</span>
+                            <span class="item-price">$1.170.000</span>
                         </li>
                     </ul>
                 </div>
@@ -1717,27 +1757,39 @@
                     <p>Informativo LA REGIÒN, en alianza con Radio Rec Mi Ciudad, Ondas de la Montaña y otros medios, ofrece:</p>
                     <ul>
                         <li>
-                            <span class="item-name">Espacio de una hora semanal en radio y multiplataformas digitales.</span>
+                            <span class="item-name">Espacio de una hora en nuestros medios y multiplaformas y digitales.</span>
                         </li>
                         <li>
-                            <span class="item-name">Opciones de horarios flexibles y acceso a audiencia comprometida.</span>
+                            <span class="item-name">Opciones de horarios flexibles para adaptarse a tus necesidades.</span>
                         </li>
                         <li>
-                            <span class="item-name">Publicidad en páginas web y redes sociales (Facebook y YouTube) con formatos variados (banners, videos, podcasts).</span>
+                            <span class="item-name">Acceso a nuestra audiencia comprometida y leal.</span>
                         </li>
                         <li>
-                            <span class="item-name">**Beneficios:** Mayor visibilidad y reconocimiento de marca, aumento de conciencia y consideración del producto/servicio.</span>
+                            <span class="item-name">Publicidad en nuestras páginas web y redes sociales (Facebook y YouTube).</span>
                         </li>
                         <li>
-                            <span class="item-name">**Condiciones:** Pago anticipado, contrato mínimo de 3 meses, material publicitario provisto por el cliente.</span>
+                            <span class="item-name">Opciones de formatos publicitarios variados (banners, videos, podcasts, etc.).</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Acceso a nuestra audiencia digital comprometida y en crecimiento.</span>
+                        </li>
+                        <li>
+                            <span class="item-name">**Beneficios:** Mayor visibilidad y reconocimiento de marca durante esa hora.</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Aumento en la conciencia y consideración del producto o servicio.</span>
+                        </li>
+                        <li>
+                            <span class="item-name">**Condiciones:** Pago anticipado requerido, contrato mínimo de 3 meses, material publicitario debe ser proporcionado por el cliente con anticipación.</span>
                         </li>
                         <li>
                             <span class="item-name">**Valor del mes (4 horas mensuales):** (solo emisión).</span>
-                            <span class="item-price">$3.500.000</span>
+                            <span class="item-price">$3.640.000</span>
                         </li>
                         <li>
                             <span class="item-name">Costo de producción y edición: por programa.</span>
-                            <span class="item-price">$500.000</span>
+                            <span class="item-price">$520.000</span>
                         </li>
                     </ul>
                 </div>
@@ -1748,7 +1800,7 @@
                     <ul>
                         <li>
                             <span class="item-name">Instagram, Facebook, YouTube, X, Rumble: por un mes.</span>
-                            <span class="item-price">$250.000</span>
+                            <span class="item-price">$260.000</span>
                         </li>
                     </ul>
                 </div>
@@ -1765,11 +1817,11 @@
                         </li>
                         <li>
                             <span class="item-name">Precios desde</span>
-                            <span class="item-price">$500.000</span>
+                            <span class="item-price">$520.000</span>
                         </li>
                         <li>
                             <span class="item-name">hasta</span>
-                            <span class="item-price">$2.250.000</span>
+                            <span class="item-price">$2.340.000</span>
                         </li>
                     </ul>
                 </div>
@@ -1780,11 +1832,11 @@
                     <ul>
                         <li>
                             <span class="item-name">Noticiero Al Día con Héctor Bermúdez: Cuña</span>
-                            <span class="item-price">$37.500</span>
+                            <span class="item-price">$39.000</span>
                         </li>
                         <li>
                             <span class="item-name">Analizando con Hernando Arango: Cuña 20 seg.</span>
-                            <span class="item-price">$43.750</span>
+                            <span class="item-price">$45.500</span>
                         </li>
                     </ul>
                 </div>
@@ -1803,12 +1855,12 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr><td>Comercial en musical</td><td>30”</td><td><span>$68.750</span></td></tr>
-                                <tr><td>Comercial en noticieros</td><td>30”</td><td><span>$81.250</span></td></tr>
-                                <tr><td>Comercial en noticieros</td><td>20”</td><td><span>$68.750</span></td></tr>
-                                <tr><td>Comercial “Pal rancho”</td><td>30”</td><td><span>$68.750</span></td></tr>
-                                <tr><td>Comercial “Pal rancho”</td><td>20”</td><td><span>$50.000</span></td></tr>
-                                <tr><td>Publi reportaje</td><td>5 min</td><td><span>$1.375.000</span></td></tr>
+                                <tr><td>Comercial en musical</td><td>30”</td><td><span>$71.500</span></td></tr>
+                                <tr><td>Comercial en noticieros</td><td>30”</td><td><span>$84.500</span></td></tr>
+                                <tr><td>Comercial en noticieros</td><td>20”</td><td><span>$71.500</span></td></tr>
+                                <tr><td>Comercial “Pal rancho”</td><td>30”</td><td><span>$71.500</span></td></tr>
+                                <tr><td>Comercial “Pal rancho”</td><td>20”</td><td><span>$52.000</span></td></tr>
+                                <tr><td>Publi reportaje</td><td>5 min</td><td><span>$1.430.000</span></td></tr>
                                 <tr><td colspan="3">Remoto: Tiempo, fecha, día y lugar; acordado por las partes para así mismo acordar el costo.</td></tr>
                             </tbody>
                         </table>
@@ -1852,8 +1904,8 @@
                 <div class="package-card featured-package">
                     <div class="package-header">
                         <h3>Paquete 1</h3>
-                        <p class="price">$1.748.750</p>
-                        <p class="discount">25% Dcto. por 3 meses</p>
+                        <p class="price">$1.818.70</p>
+                        <p class="discount">25% Dcto. por contrato de 3 meses</p>
                     </div>
                     <ul class="package-features">
                         <li><i class="fas fa-check-circle"></i> Espacios en TV digital</li>
@@ -1872,8 +1924,8 @@
                 <div class="package-card">
                     <div class="package-header">
                         <h3>Paquete 2</h3>
-                        <p class="price">$1.748.750</p>
-                        <p class="discount">20% Dcto. por 2 meses</p>
+                        <p class="price">$1.818.70</p>
+                        <p class="discount">20% Dcto. por contrato de 2 meses</p>
                     </div>
                     <ul class="package-features">
                         <li><i class="fas fa-check-circle"></i> Espacios en TV digital</li>
@@ -1892,8 +1944,8 @@
                 <div class="package-card featured-package">
                     <div class="package-header">
                         <h3>Paquete 3</h3>
-                        <p class="price">$1.748.750</p>
-                        <p class="discount">40% Dcto. por 3 meses (Pago Anticipado)</p>
+                        <p class="price">$1.818.70</p>
+                        <p class="discount">40% Dcto. por 3 meses (CON PAGO ANTICIPADO)</p>
                     </div>
                     <ul class="package-features">
                         <li><i class="fas fa-check-circle"></i> Espacios en TV digital</li>
@@ -1912,7 +1964,7 @@
                 <div class="package-card">
                     <div class="package-header">
                         <h3>Paquete 4</h3>
-                        <p class="price">$1.248.750</p>
+                        <p class="price">$1.298.70</p>
                         <p class="discount">40% Dcto. por 3 meses (Pago Anticipado)</p>
                     </div>
                     <ul class="package-features">
@@ -1932,7 +1984,7 @@
                 <div class="package-card featured-package">
                     <div class="package-header">
                         <h3>Paquete 5</h3>
-                        <p class="price">$1.748.750</p>
+                        <p class="price">$2.273.375</p>
                         <p class="discount">50% Dcto. por 6 meses (Pago Anticipado)</p>
                     </div>
                     <ul class="package-features">
@@ -1952,7 +2004,7 @@
                 <div class="package-card">
                     <div class="package-header">
                         <h3>Paquete 6</h3>
-                        <p class="price">$1.248.750</p>
+                        <p class="price">$1.623.375</p>
                         <p class="discount">50% Dcto. por 6 meses (Pago Anticipado)</p>
                     </div>
                     <ul class="package-features">
