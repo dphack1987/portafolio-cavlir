@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Cambiando Vidas LR S.A.S. | Portafolio de Servicios de Comunicación</title>
     <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -1275,15 +1275,26 @@
         }
 
         @media (max-width: 480px) {
-            /* Further adjustments for the hero logos on very small screens */
-            .hero-logos-container {
+            /* Mejorar botones flotantes en móviles */
+            .floating-button {
+                width: 50px; height: 50px; font-size: 1.5em; bottom: 15px; right: 15px;
+            }
+            .floating-email-button {
+                bottom: 70px;
+            }
+            /* Mejorar padding y tamaño de formulario en móviles */
+            .contact-form { padding: 10px; }
+            .contact-form input, .contact-form textarea { font-size: 0.9em; padding: 8px; }
+            .contact-form button { font-size: 0.9em; padding: 8px 20px; }
+            /* Ajustar grids para una sola columna en móviles */
+            .service-grid, .coverage-grid, .rates-grid, .package-grid, .partner-logos-grid {
+                grid-template-columns: 1fr;
                 gap: 15px;
             }
-            .hero-logos-container .logo-cavlir {
-                max-width: 180px;
-            }
-            .hero-logos-container .logo-informativo {
-                max-width: 120px;
+            /* Mejorar visualización de logos en móviles */
+            .hero-logos-container img, .partners .partner-logos-grid img {
+                max-width: 100px !important;
+                height: auto;
             }
         }
     </style>
@@ -2231,27 +2242,33 @@
         // JavaScript para el menú móvil
         document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
             document.querySelector('.mobile-nav-overlay').classList.add('active');
+            document.body.style.overflow = 'hidden'; // Evita scroll de fondo en móviles
         });
 
         document.querySelector('.close-mobile-menu').addEventListener('click', function() {
             document.querySelector('.mobile-nav-overlay').classList.remove('active');
+            document.body.style.overflow = ''; // Restaura scroll
         });
 
         // Cerrar menú móvil al hacer clic en un enlace
         document.querySelectorAll('.mobile-nav-overlay ul li a').forEach(item => {
             item.addEventListener('click', () => {
                 document.querySelector('.mobile-nav-overlay').classList.remove('active');
+                document.body.style.overflow = '';
             });
         });
 
-        // Animación de scroll suave para los enlaces de navegación
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+        // Animación de scroll suave para los enlaces de navegación (excepto menú móvil)
+        document.querySelectorAll('nav.main-nav a, .footer-social a, .btn, .floating-button').forEach(anchor => {
+            if(anchor.getAttribute('href') && anchor.getAttribute('href').startsWith('#')) {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if(target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
                 });
-            });
+            }
         });
     </script>
 </body>
